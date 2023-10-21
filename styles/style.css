@@ -412,7 +412,7 @@ body {
 }
 
 .contact-title{
-    font-size: 9vw;
+    font-size: 7vw;
     margin: 0.5rem 0.5em;
 }
 
@@ -440,6 +440,7 @@ body {
 
 #contact li a:hover{
     text-decoration: underline;
+    color: red;
 }
 
 
