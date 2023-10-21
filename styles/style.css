@@ -161,6 +161,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 90vh;
+    margin: 0.5rem 1rem;
 }
 
 .home-content{
@@ -337,8 +338,8 @@ body {
 ========================== */
 
 .project-heading{
-    font-size: 5vw;
-    margin: 0.5rem 0.5em;
+    font-size: 7vw;
+    margin: 0.5rem 1rem;
 }
 
 /* Main container */
@@ -413,7 +414,7 @@ body {
 
 .contact-title{
     font-size: 7vw;
-    margin: 0.5rem 0.5em;
+    margin: 0.5rem 1rem;
 }
 
 #contact ul {
