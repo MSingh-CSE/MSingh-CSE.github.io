@@ -64,16 +64,54 @@ const updateScrollButtonVisibility = () => {
   let lastScrollTime = 0;
   const throttleDuration = 400;
 
-  window.addEventListener('wheel', function(event) {
-    event.preventDefault();
-    const currentTime = new Date().getTime();
+  let isTouching = false;
 
-    if (currentTime - lastScrollTime > throttleDuration) {
-        const direction = Math.sign(event.deltaY);
-        scrollToSection(currentSectionIndex + direction);
-        lastScrollTime = currentTime;
-    }
+  let touchStartY = 0;
+  let touchEndY = 0;
+  let lastTouchTime = 0;
+// Threshold for scroll to trigger
+const touchThreshold = 100;  // Adjust the value based on your needs
+const touchThrottleDuration = 400;  // Time in ms to throttle touch event
+let shouldPreventScroll = false;
+
+// Prevent scroll when shouldPreventScroll flag is true
+window.addEventListener("touchmove", function(event) {
+  if (shouldPreventScroll) {
+    event.preventDefault();
+  }
+  touchEndY = event.touches[0].clientY;
 }, { passive: false });
+
+window.addEventListener("touchstart", function(event) {
+  shouldPreventScroll = true;
+  touchStartY = event.touches[0].clientY;
+}, { passive: true });
+
+window.addEventListener("touchend", function(event) {
+  shouldPreventScroll = false;
+  const currentTime = new Date().getTime();
+  const touchDifference = touchEndY - touchStartY;
+
+  if (Math.abs(touchDifference) > touchThreshold && currentTime - lastTouchTime > touchThrottleDuration) {
+    scrollToSection(currentSectionIndex - Math.sign(touchDifference));
+    lastTouchTime = currentTime;
+  }
+}, { passive: true });
+
+
+  window.addEventListener('wheel', function(event) {
+    if (!isTouching) {
+      event.preventDefault();
+      const currentTime = new Date().getTime();
+  
+      if (currentTime - lastScrollTime > throttleDuration) {
+          const direction = Math.sign(event.deltaY);
+          scrollToSection(currentSectionIndex + direction);
+          lastScrollTime = currentTime;
+      }
+    }
+  }, { passive: false });
+  
   
   // Event Listener for keyboard arrow keys
   window.addEventListener("keydown", function (event) {
@@ -101,3 +139,5 @@ const updateScrollButtonVisibility = () => {
       scrollToSection(targetIndex);
     });
   });
+
+  
