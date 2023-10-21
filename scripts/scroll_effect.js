@@ -62,7 +62,7 @@ const updateScrollButtonVisibility = () => {
   
   // Event Listener for touchpad and mouse wheel scrolling
   let lastScrollTime = 0;
-  const throttleDuration = 800;
+  const throttleDuration = 400;
 
   window.addEventListener('wheel', function(event) {
     event.preventDefault();

@@ -69,11 +69,11 @@ body {
 ========================== */
 /* For Webkit browsers like Chrome and Safari */
 ::-webkit-scrollbar {
-    width: 4px;
-    height: 8px;
+    width: 0.5vw;
+    height: 0.5vh;
 }
 ::-webkit-scrollbar-thumb {
-    background: black;
+    background: red;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
@@ -101,8 +101,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:2em 0.5em;
-    border-right: 1px solid #ccc;
+    padding:2vw 0.5vw;
+    border-right: 0.1vw solid #ccc;
 }
 
 #navbar .logo{
@@ -116,10 +116,11 @@ body {
 }
 
 #navbar ul li{
-    line-height: 5em;
+    line-height: 6vw;
 }
 
 #navbar ul li a{
+    font-size: 1.1vw;
     display: flex;
     white-space: nowrap;
     justify-content: space-around;
@@ -140,7 +141,7 @@ body {
 ========================== */
 .content-section{
     min-height: 100vh;
-    padding: 1em;
+    padding: 1vw;
     margin-left: 5vw;  /* Navbar width */
     box-sizing: border-box;
     opacity: 0;
@@ -161,7 +162,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 90vh;
-    margin: 0.5rem 1rem;
+    margin: 0.5vw 2vw;
 }
 
 .home-content{
@@ -174,22 +175,26 @@ body {
 
 .name{
     font-size: 6vw;
-    font-weight: 500;
-    /* font-family: 'allura'; */
+    font-weight: 700;
+    font-family: 'Dancing Script';
     text-align: center;
 }
 
 .title{
     font-size: 1.5vw;
-    line-height: 5rem;
+    line-height: 4em;
     text-align: center;
-
 }
+
+.summary{
+    font-size: 1.1vw;
+}
+
 
 .colored-bar{
     /* animation: changeColor 10s infinite; */
     font-weight: bolder;
-    font-size: 1.4rem;
+    font-size: 1.7vw;
     color: red;
 }
 
@@ -225,7 +230,7 @@ body {
 .about-navbar {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 2vw;
 }
 
 .about-navbar ul {
@@ -242,7 +247,7 @@ body {
     background-color: black;
     color: white;
     transition: background-color 0.3s, color 0.3s;
-    border: 1px solid black;
+    border: 0.1vw solid black;
 }
 .about-navbar li.active{
     background-color: white;
@@ -255,7 +260,7 @@ body {
 }
 
 .about-sub-section{
-    height: calc(100vh - 5em - 2rem);
+    height: calc(100vh - 4vw);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,22 +275,22 @@ body {
 
 .timeline {
     position: relative;
-    padding-left: 5rem; /* Provides space for the circle and line */
+    padding-left: 5vw; /* Provides space for the circle and line */
 }
 
 .milestone {
     position: relative; /* Allows for positioning children absolutely */
-    padding: 4rem 0; /* Space above and below each milestone */
+    padding: 3.5vw 0; /* Space above and below each milestone */
 }
 
 .milestone::before {
     content: ''; /* Empty content for the pseudo-element */
     position: absolute;
-    left: 0.5rem; /* Centering the line with the circle */
+    left: 0.6vw; /* Centering the line with the circle */
     bottom: 0;
-    top: 10rem; /* This will make the line appear below the center of the milestone */
-    width: 0.15rem;
-    margin-bottom: -3.5rem;
+    top: 10.5vw ; /* This will make the line appear below the center of the milestone */
+    width: 0.25vw;
+    margin-bottom: -3.5vw;
     background-color: black;
     z-index: 1; /* Ensure the line is below the circle */
 }
@@ -296,24 +301,24 @@ body {
 
 .circle {
     position: absolute;
-    top: calc(50% - 1rem); 
-    width: 20px;
-    height: 20px;
+    top: calc(50% - 1vw); 
+    width: 1.5vw;
+    height: 1.5vw;
     background-color: black;
     border-radius: 50%;
     z-index: 2;
 }
 
 .milestone:first-child .circle {
-    width: 25px; 
-    height: 25px;
+    width: 1.8vw; 
+    height: 1.8vw;
     background-color: black;
-    border: 8px solid red;
+    border: 0.4vw solid red;
 }
 
 .milestone-content {
-    padding-left: 50px; /* Space between circle and milestone content */
-    padding-right: 100px;
+    padding-left: 4vw; /* Space between circle and milestone content */
+    padding-right: 3.5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -339,7 +344,7 @@ body {
 
 .project-heading{
     font-size: 7vw;
-    margin: 0.5rem 1rem;
+    margin: 0.5vw 2vw;
 }
 
 /* Main container */
@@ -354,13 +359,13 @@ body {
   /* Individual project cards */
   .project-card {
     flex: 1;
-    max-width: calc(50% - 30px); /* 50% width of the container minus 40px for margins */
-    margin: 10px;
+    max-width: calc(50% - 6.6em); /* 50% width of the container minus 40px for margins */
+    margin: 1vw;
     background-color: white;
     color: black;
     border-radius: 8px;
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2.2em;
+    box-shadow: 0.1vw 0.2vw 0.4vw rgba(0, 0, 0, 0.1);
+    padding: 1.5vw;
     /* text-align: center; */
   }
   
@@ -403,7 +408,7 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
-    padding: 0.5em;
+    padding: 0.5vw;
 }
 
 .contact-image img{
@@ -414,7 +419,7 @@ body {
 
 .contact-title{
     font-size: 7vw;
-    margin: 0.5rem 1rem;
+    margin: 0.5vw 2vw;
 }
 
 #contact ul {
@@ -426,21 +431,20 @@ body {
 }
 
 #contact li {
-    margin: 0.5em 0; 
+    margin: 0.5vw 0; 
+    padding: 1.5vw 3vw; 
 
 } 
 
 #contact li a {
-    display: block;
     font-size: 2vw;
     text-decoration: none;
     color: black;
-    padding: 0.5em 3em; 
-    border-radius: 5px;
+    transition: color 0.2s ease;
+
 }
 
 #contact li a:hover{
-    text-decoration: underline;
     color: red;
 }
 
@@ -452,13 +456,13 @@ body {
 ========================== */
 .scroll-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2vw;
+    right: 2vw;
     z-index: 1000;
-    font-size: 24px;
+    font-size: 2vw;
     line-height: 1;
-    padding: 10px;
-    border: 2px solid black;
+    padding: 0.7vw;
+    border: 0.18vw solid black;
     background-color: rgba(255, 255, 255, 0.7);
     color: black;
     border-radius: 50%;
@@ -472,6 +476,6 @@ body {
     background-color: rgba(0, 0, 0, 1);
 }
 #scrollUp {
-    bottom: 80px;
+    bottom: 7vw;
 }
 
