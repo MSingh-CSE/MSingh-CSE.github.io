@@ -347,32 +347,32 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     /* background-color: black; */
-    padding: 20px;
+    padding: 2.2em;
   }
   
   /* Individual project cards */
   .project-card {
     flex: 1;
-    max-width: calc(50% - 40px); /* 50% width of the container minus 40px for margins */
+    max-width: calc(50% - 30px); /* 50% width of the container minus 40px for margins */
     margin: 10px;
     background-color: white;
     color: black;
     border-radius: 8px;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 2.2em;
     /* text-align: center; */
   }
   
   /* Project card title */
   .project-card-title {
-    font-size: 1.5em;
+    font-size: 1.7vw;
     margin-bottom: 10px;
     font-weight: bold;
   }
   
   /* Project card description */
   .project-card-description {
-    font-size: 1em;
+    font-size: 1.1vw;
     margin-bottom: 10px;
   }
   
