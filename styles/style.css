@@ -5,6 +5,10 @@
 * {
     box-sizing: border-box;
 }
+
+html{
+    height: 100%;
+}
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
     margin: 0;
     padding: 0;
@@ -171,6 +175,7 @@ body {
 
 .welcome{
     font-size: 2vw;
+    line-height: 2em;
 }
 
 .name{
@@ -182,7 +187,7 @@ body {
 
 .title{
     font-size: 1.5vw;
-    line-height: 4em;
+    line-height: 3em;
     text-align: center;
 }
 
@@ -193,8 +198,8 @@ body {
 
 .colored-bar{
     /* animation: changeColor 10s infinite; */
-    font-weight: bolder;
-    font-size: 1.7vw;
+    font-weight: lighter;
+    font-size: 2vw;
     color: red;
 }
 

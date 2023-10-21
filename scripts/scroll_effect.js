@@ -60,31 +60,33 @@ const updateScrollButtonVisibility = () => {
   scrollUpButton.addEventListener("click", scrollUp);
   scrollDownButton.addEventListener("click", scrollDown);
   
-  // Event Listener for touchpad and mouse wheel scrolling
   let lastScrollTime = 0;
-  const throttleDuration = 400;
+  const throttleDuration = 300;
 
-  let isTouching = false;
+let isTouching = false;
 
-  let touchStartY = 0;
-  let touchEndY = 0;
-  let lastTouchTime = 0;
-// Threshold for scroll to trigger
-const touchThreshold = 100;  // Adjust the value based on your needs
-const touchThrottleDuration = 400;  // Time in ms to throttle touch event
+let touchStartY = 0;
+let touchEndY = 0;
+let lastTouchTime = 0;
+
+const touchThreshold = 100;
+const touchThrottleDuration = 300;  
+
 let shouldPreventScroll = false;
+let didUserMove = false;  
 
-// Prevent scroll when shouldPreventScroll flag is true
 window.addEventListener("touchmove", function(event) {
   if (shouldPreventScroll) {
     event.preventDefault();
   }
   touchEndY = event.touches[0].clientY;
+  didUserMove = true;
 }, { passive: false });
 
 window.addEventListener("touchstart", function(event) {
   shouldPreventScroll = true;
   touchStartY = event.touches[0].clientY;
+  didUserMove = false;
 }, { passive: true });
 
 window.addEventListener("touchend", function(event) {
@@ -92,11 +94,12 @@ window.addEventListener("touchend", function(event) {
   const currentTime = new Date().getTime();
   const touchDifference = touchEndY - touchStartY;
 
-  if (Math.abs(touchDifference) > touchThreshold && currentTime - lastTouchTime > touchThrottleDuration) {
+  if (didUserMove && Math.abs(touchDifference) > touchThreshold && currentTime - lastTouchTime > touchThrottleDuration) {
     scrollToSection(currentSectionIndex - Math.sign(touchDifference));
     lastTouchTime = currentTime;
   }
 }, { passive: true });
+
 
 
   window.addEventListener('wheel', function(event) {
