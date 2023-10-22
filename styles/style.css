@@ -6,9 +6,6 @@
     box-sizing: border-box;
 }
 
-html{
-    height: 100%;
-}
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
     margin: 0;
     padding: 0;
@@ -33,7 +30,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-color: black;
     padding: 2em;
     z-index: 1001;
@@ -44,7 +41,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
     align-items: center; 
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     text-align: center;
     color: white;
     font-size: 2rem;
@@ -100,7 +97,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    height:100vh;
+    height:calc(var(--vh, 1vh) * 100);
     width:5vw;
     display: flex;
     flex-direction: column;
@@ -143,12 +140,16 @@ body {
    CONTENT SECTION
    - General layout and styling for each content section.
 ========================== */
+
 .content-section{
-    min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     padding: 1vw;
     margin-left: 5vw;  /* Navbar width */
     box-sizing: border-box;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     transition: opacity 1.3s ease-out;
 }
 
@@ -165,7 +166,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90vh;
+    height: calc(var(--vh, 1vh) * 100);
     margin: 0.5vw 2vw;
 }
 
@@ -242,7 +243,6 @@ body {
     list-style-type: none;
     padding: 0;
     display: flex;
-    /* gap: 20px;  */
 }
 
 .about-navbar li {
@@ -264,11 +264,16 @@ body {
     color: black;
 }
 
+.about-container{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .about-sub-section{
-    height: calc(100vh - 4vw);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 /* Initially hide other divs */
@@ -358,20 +363,27 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     /* background-color: black; */
-    padding: 2.2em;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   
   /* Individual project cards */
   .project-card {
     flex: 1;
-    max-width: calc(50% - 6.6em); /* 50% width of the container minus 40px for margins */
+    max-width: 50%;
     margin: 1vw;
     background-color: white;
     color: black;
     border-radius: 8px;
     box-shadow: 0.1vw 0.2vw 0.4vw rgba(0, 0, 0, 0.1);
     padding: 1.5vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* text-align: center; */
+  }
+
+  .project-card:hover {
+    transform: translateY(-0.5vw);
+    box-shadow: 0.2vw 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
   }
   
   /* Project card title */
@@ -402,9 +414,17 @@ body {
    CONTACT ME SECTION
    - General layout and styling for about section.
 ========================== */
+
+.contact-title{
+    font-size: 7vw;
+    margin: 0.5vw 2vw;
+}
+
 .contact-container{
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
 .contact-image{
@@ -418,14 +438,9 @@ body {
 
 .contact-image img{
     width :100%;
-    /* height: 50%; */
     object-fit: cover;
 }
 
-.contact-title{
-    font-size: 7vw;
-    margin: 0.5vw 2vw;
-}
 
 #contact ul {
     display: flex;
@@ -483,4 +498,3 @@ body {
 #scrollUp {
     bottom: 7vw;
 }
-
