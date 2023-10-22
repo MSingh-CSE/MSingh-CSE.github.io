@@ -104,6 +104,7 @@ body {
     justify-content: space-between;
     padding:2vw 0.5vw;
     border-right: 0.1vw solid #ccc;
+    box-shadow: 0.3vw 0px 0.6vw rgba(0, 0, 0, 0.1);
 }
 
 #navbar .logo{
@@ -240,7 +241,7 @@ body {
 .about-navbar {
     display: flex;
     justify-content: center;
-    margin-top: 2vw;
+    margin-top: calc(var(--vh, 1vh) * 3);
 }
 
 .about-navbar ul {
@@ -268,49 +269,63 @@ body {
     color: black;
 }
 
-.about-container{
-    margin-top: auto;
-    margin-bottom: auto;
+.about-container-wrapper{
+    display: flex;
+    justify-content: center;
+    height: calc(var(--vh, 1vh) * 90);
 }
 
-.about-sub-section{
+.about-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
-/* Initially hide other divs */
-.experience {
-    display: none;
-}
+/* Switch tabs code */
+.section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
 
 /* Timeline style */
-
 .timeline {
     position: relative;
+    width: 100%;
     padding-left: 5vw; /* Provides space for the circle and line */
 }
 
 .milestone {
-    position: relative; /* Allows for positioning children absolutely */
-    padding: 3.5vw 0; /* Space above and below each milestone */
+    position: relative; 
+    padding: 3.5vw 0;
 }
 
 .milestone::before {
-    content: ''; /* Empty content for the pseudo-element */
+    content: ''; 
     position: absolute;
-    left: 0.6vw; /* Centering the line with the circle */
+    left: 0.6vw;
     bottom: 0;
-    top: 10.5vw ; /* This will make the line appear below the center of the milestone */
+    top: 10.5vw ; 
     width: 0.25vw;
     margin-bottom: -3.5vw;
     background-color: black;
-    z-index: 1; /* Ensure the line is below the circle */
+    z-index: 1;
 }
 
 .milestone:last-child::before {
-    display: none; /* Remove the line for the last (earliest) milestone */
+    display: none; 
 }
 
 .circle {
@@ -323,7 +338,7 @@ body {
     z-index: 2;
 }
 
-.milestone:first-child .circle {
+.milestone .circle.present {
     width: 1.8vw; 
     height: 1.8vw;
     background-color: black;
@@ -331,7 +346,7 @@ body {
 }
 
 .milestone-content {
-    padding-left: 4vw; /* Space between circle and milestone content */
+    padding-left: 4vw; 
     padding-right: 3.5vw;
     display: flex;
     justify-content: space-between;
@@ -379,7 +394,8 @@ body {
     background-color: white;
     color: black;
     border-radius: 8px;
-    box-shadow: 0.1vw 0.2vw 0.4vw rgba(0, 0, 0, 0.1);
+    box-shadow: 0vw -0.4vw 0.5vw rgba(0, 0, 0, 0.1), 0vw 0.4vw 0.5vw rgba(0, 0, 0, 0.1);
+
     padding: calc(var(--vh, 1vh) * 2) 1.5vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* text-align: center; */
@@ -391,7 +407,7 @@ body {
 
   .project-card:hover {
     transform: translateY(-0.5vw);
-    box-shadow: 0.2vw 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+    box-shadow: 0vw -0.6vw 0.8vw rgba(0, 0, 0, 0.2), 0vw 0.6vw 0.8vw rgba(0, 0, 0, 0.2);
   }
   
   /* Project card title */

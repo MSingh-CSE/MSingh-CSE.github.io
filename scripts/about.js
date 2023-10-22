@@ -1,26 +1,68 @@
+let currentSection = null;
+
+function fadeElement(element, opacity, duration) {
+  return new Promise(resolve => {
+    element.style.transition = `opacity ${duration}ms ease`;
+    element.style.opacity = opacity;
+    setTimeout(() => {
+      resolve();
+    }, duration);
+  });
+}
+
+function showSection(sectionId) {
+  if (currentSection === sectionId) {
+    return;
+  }
+  
+  const targetSection = document.getElementById(sectionId);
+
+  const educationLi = document.querySelector('.about-navbar ul li:nth-child(1)');
+  const experienceLi = document.querySelector('.about-navbar ul li:nth-child(2)');
+
+  // Remove active class from all li
+  educationLi.classList.remove('active');
+  experienceLi.classList.remove('active');
+
+  // Add active class to the selected li
+  if (sectionId === 'education') {
+    educationLi.classList.add('active');
+  } else if (sectionId === 'experience') {
+    experienceLi.classList.add('active');
+  }
+
+  targetSection.style.display = "flex";
+  let oldSection = currentSection ? document.getElementById(currentSection) : null;
+
+  Promise.resolve()
+    .then(() => {
+      if (oldSection) {
+        return fadeElement(oldSection, 0, 500);
+      }
+    })
+    .then(() => {
+      if (oldSection) {
+        oldSection.style.display = "none";
+      }
+      return fadeElement(targetSection, 1, 500);
+    })
+    .then(() => {
+      currentSection = sectionId;
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    const educationDiv = document.querySelector('.education');
-    const experienceDiv = document.querySelector('.experience');
-    const educationLi = document.querySelector('.about-navbar ul li:nth-child(1)');
-    const experienceLi = document.querySelector('.about-navbar ul li:nth-child(2)');
-    const allLiElements = document.querySelectorAll('.about-navbar ul li');
+  showSection("education");
+  const educationLi = document.querySelector('.about-navbar ul li:nth-child(1)');
+  const experienceLi = document.querySelector('.about-navbar ul li:nth-child(2)');
 
+  educationLi.classList.add('active'); // Initially set the active class on 'Education'
 
-    educationLi.addEventListener('click', function() {
-        educationDiv.style.display = 'block';
-        experienceDiv.style.display = 'none';
+  educationLi.addEventListener('click', function() {
+    showSection('education');
+  });
 
-        allLiElements.forEach(li => li.classList.remove('active'));
-
-        educationLi.classList.add('active');
-    });
-
-    experienceLi.addEventListener('click', function() {
-        educationDiv.style.display = 'none';
-        experienceDiv.style.display = 'block';
-
-        allLiElements.forEach(li => li.classList.remove('active'));
-
-        experienceLi.classList.add('active');
-    });
+  experienceLi.addEventListener('click', function() {
+    showSection('experience');
+  });
 });
