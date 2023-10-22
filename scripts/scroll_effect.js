@@ -24,8 +24,11 @@ const updateScrollButtonVisibility = () => {
   let currentSectionIndex = 0;
   const sections = Array.from(document.querySelectorAll("section"));
   
+  const nav_links = Array.from(document.querySelectorAll("#navbar ul li a"));
+  
   // Initialize the first section as visible
   sections[0].classList.add("visible");
+  nav_links[0].classList.add("active");
   
   updateScrollButtonVisibility();
   
@@ -50,6 +53,9 @@ const updateScrollButtonVisibility = () => {
       // Remove 'visible' class from all sections and add to the current one
       sections.forEach((section) => section.classList.remove("visible"));
       sections[currentSectionIndex].classList.add("visible");
+
+      nav_links.forEach((nav_link) => nav_link.classList.remove("active"));
+      nav_links[currentSectionIndex].classList.add("active");
     }
   };
   
