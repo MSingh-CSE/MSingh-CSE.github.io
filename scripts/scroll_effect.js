@@ -70,7 +70,7 @@ scrollUpButton.addEventListener("click", scrollUp);
 scrollDownButton.addEventListener("click", scrollDown);
 
 let lastScrollTime = 0;
-const throttleDuration = isMac ? 1500 : 300;
+const throttleDuration = isMac ? 1300 : 300;
 
 let isTouching = false;
 
@@ -79,7 +79,7 @@ let touchEndY = 0;
 let lastTouchTime = 0;
 
 const touchThreshold = 100;
-const touchThrottleDuration = isMac ? 1500 : 300;  
+const touchThrottleDuration = isMac ? 1300 : 300;  
 
 let shouldPreventScroll = false;
 let didUserMove = false;  
