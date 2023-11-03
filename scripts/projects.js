@@ -36,7 +36,7 @@ function checkScroll() {
     developmentContainer.classList.remove('fade-left');
   }
   
-  if (developmentContainer.scrollLeft < maxScrollLeft) {
+  if (developmentContainer.scrollLeft < maxScrollLeft - 30) {
     developmentContainer.classList.add('fade-right');
   } else {
     developmentContainer.classList.remove('fade-right');
@@ -90,6 +90,7 @@ function showProjectSection(sectionId) {
         }
         targetSection.style.display = "flex";
         targetSection.style.opacity = "0"; 
+        checkScroll();
         return Promise.resolve();
       })
       .then(() => {
@@ -97,7 +98,6 @@ function showProjectSection(sectionId) {
       })
       .then(() => {
         currentProjectSection = sectionId;
-        checkScroll();
       });
   }
   
