@@ -20,11 +20,9 @@ function showSection(sectionId) {
   const educationLi = document.querySelector('.about-navbar ul li:nth-child(1)');
   const experienceLi = document.querySelector('.about-navbar ul li:nth-child(2)');
 
-  // Remove active class from all li
   educationLi.classList.remove('active');
   experienceLi.classList.remove('active');
 
-  // Add active class to the selected li
   if (sectionId === 'education') {
     educationLi.classList.add('active');
   } else if (sectionId === 'experience') {
@@ -56,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const educationLi = document.querySelector('.about-navbar ul li:nth-child(1)');
   const experienceLi = document.querySelector('.about-navbar ul li:nth-child(2)');
 
-  educationLi.classList.add('active'); // Initially set the active class on 'Education'
+  educationLi.classList.add('active'); 
 
   educationLi.addEventListener('click', function() {
     showSection('education');

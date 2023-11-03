@@ -37,23 +37,18 @@ updateScrollButtonVisibility();
 // Function to smoothly scroll to a given section by its index
 const scrollToSection = (index) => {
 
-  // Ensure the index is within bounds
   if (index >= 0 && index < sections.length) {
-    // Calculate the top offset of the target section
     const offsetTop = sections[index].offsetTop;
 
-    // Perform smooth scrolling to the target section
     window.scrollTo({
       top: offsetTop,
       behavior: "smooth",
     });
 
-    // Update the current section index
     currentSectionIndex = index;
 
     updateScrollButtonVisibility();
 
-    // Remove 'visible' class from all sections and add to the current one
     sections.forEach((section) => section.classList.remove("visible"));
     sections[currentSectionIndex].classList.add("visible");
 
@@ -74,6 +69,7 @@ const throttleDuration = isMac ? 1300 : 300;
 
 let isTouching = false;
 
+let touchStartX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
 let lastTouchTime = 0;
@@ -84,31 +80,52 @@ const touchThrottleDuration = isMac ? 1300 : 300;
 let shouldPreventScroll = false;
 let didUserMove = false;  
 
+const isHorizontalMove = (event) => {
+  const dx = touchEndX - touchStartX; 
+  const dy = touchEndY - touchStartY; 
+  const isHorizontal = Math.abs(dx) > Math.abs(dy); 
+  
+  return isHorizontal;
+};
+
+const researchSection = document.getElementById('research');
+const developmentSection = document.getElementById('development');
+
 window.addEventListener("touchmove", function(event) {
-if (shouldPreventScroll) {
-  event.preventDefault();
-}
-touchEndY = event.touches[0].clientY;
-didUserMove = true;
+  touchEndX = event.touches[0].clientX;
+  touchEndY = event.touches[0].clientY;
+  didUserMove = true;
+
+  if (isHorizontalMove(event) && (researchSection.contains(event.target) || developmentSection.contains(event.target))) {
+    shouldPreventScroll = false;
+  } else {
+    event.preventDefault();
+  }
 }, { passive: false });
 
 window.addEventListener("touchstart", function(event) {
 shouldPreventScroll = true;
 isTouching = true;
+touchStartX = event.touches[0].clientX;
 touchStartY = event.touches[0].clientY;
 didUserMove = false;
 }, { passive: true });
 
 window.addEventListener("touchend", function(event) {
-shouldPreventScroll = false;
-isTouching = false;
-const currentTime = new Date().getTime();
-const touchDifference = touchEndY - touchStartY;
-
-if (didUserMove && Math.abs(touchDifference) > touchThreshold && currentTime - lastTouchTime > touchThrottleDuration) {
-  scrollToSection(currentSectionIndex - Math.sign(touchDifference));
-  lastTouchTime = currentTime;
-}
+  const currentTime = new Date().getTime();
+  if (didUserMove) {
+    if (isHorizontalMove(event) && (researchSection.contains(event.target) || developmentSection.contains(event.target))) {
+      shouldPreventScroll = false;
+    } else {
+      if (Math.abs(touchEndY - touchStartY) > touchThreshold && currentTime - lastTouchTime > touchThrottleDuration) {
+        scrollToSection(currentSectionIndex - Math.sign(touchEndY - touchStartY));
+        lastTouchTime = currentTime;
+      }
+    }
+  }
+  
+  isTouching = false;
+  didUserMove = false;
 }, { passive: true });
 
 
@@ -133,10 +150,9 @@ window.addEventListener('wheel', function(event) {
 // Event Listener for keyboard arrow keys
 window.addEventListener("keydown", function (event) {
   if (event.key === "ArrowUp" || event.key === "ArrowDown") {
-    event.preventDefault(); // Prevent the default scroll behavior
+    event.preventDefault(); 
   }
 
-  // Scroll up or down based on the arrow key pressed
   if (event.key === "ArrowUp") {
     scrollUp();
   } else if (event.key === "ArrowDown") {

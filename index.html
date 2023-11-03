@@ -43,12 +43,16 @@
             </section>
         
             <section id="about" class="content-section">
-                <div class="about-navbar">
-                    <ul>
-                        <li class="active">Education</li>
-                        <li>Experience</li>
-                    </ul>
+                <div class="about-top-bar">
+                    <h1 class="about-heading">About.</h1>
+                    <div class="about-navbar">
+                        <ul>
+                            <li class="active">Education</li>
+                            <li>Experience</li>
+                        </ul>
+                    </div>
                 </div>
+                
                 <div class="about-container-wrapper">
                     <div class="about-container">
                         <div id="education" class="section">
@@ -86,7 +90,7 @@
                                     <div class="milestone-content">
                                         <div class="name-and-location">
                                             <h2>AI Solution Engineer</h2>
-                                            <p>Tata Consultancy Services</p>
+                                            <p>Tata Consultancy Services, India</p>
                                         </div>
                                         <div class="year">
                                             <p>2019 - 2022</p>
@@ -102,23 +106,57 @@
             </section>
         
             <section id="projects" class="content-section">
-                <h1 class="project-heading">Projects.</h1>
-                <div class="project-container">
-                    <div class="project-card">
-                        <div class="project-card-title">Efficient Coding Assistant: A Rasa-Powered NLP Chatbot</div><hr>
-                        <div class="project-card-description">Implemented a Rasa-based Natural Language Processing (NLP) chatbot aimed at automating various coding tasks. The chatbot was instrumental in boosting developer productivity by 25%, streamlining workflows, and reducing manual overhead.</div>
-                        <!-- <div class="project-card-link">Website-link</div> -->
+                <div class="project-top-bar">
+                    <h1 class="project-heading">Projects.</h1>
+                    <nav class="project-navbar">
+                        <ul>
+                            <li id="navResearch" >Research</li>
+                            <li id="navDevelopment">Development</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="project-scroll-container">
+                    <!-- <button id="scrollLeftBtn" class="scroll-btn left-scroll">&#10094;</button> -->
+                    <div id="research" class="project-container">
+                        <div class="project-card">
+                            <div class="project-card-title">Neural Network Interpretation Research
+                            </div><hr>
+                            <div class="project-card-description">Conducting cutting-edge research aimed at demystifying the internal mechanics of neural networks, with a focus on dissecting and understanding the role of individual neurons. The goal is to advance model transparency and enhance the reliability of neural networks, working towards the establishment of more interpretable and ethically sound AI systems.
+
+                            </div>
+                            <!-- <div class="project-card-link">Website-link</div> -->
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-title">Manifold Learning in NLP Embeddings</div><hr>
+                            <div class="project-card-description">Engaged in research utilizing manifold learning methods to delve into the complex, high-dimensional fabric of NLP token embeddings. This project is centered on uncovering pivotal patterns and inherent biases, integrating theoretical foundations with practical experimentation. By employing advanced manifold techniques, the research aims to illuminate and interpret the nuanced dynamics of NLP tokenization.</div>
+                            <!-- <div class="project-card-link">Website-link</div> -->
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-card-title">SmartSQL: GPT-3 Driven English-to-SQL Query Translator</div><hr>
-                        <div class="project-card-description">Developed a specialized bot powered by GPT-3 that translates English text into SQL queries, with dynamic prompt engineering for optimal database interactions. Tailored to interface with a custom database schema, the bot offers a context-aware and user-friendly querying experience that streamlines database access and management.</div>
-                        <!-- <div class="project-card-link">Website-link</div> -->
+                    <div id="development" class="project-container hidden">
+                        <div class="project-card">
+                            <div class="project-card-title">Efficient Coding Assistant: A Rasa-Powered NLP Chatbot</div><hr>
+                            <div class="project-card-description">Implemented a Rasa-based Natural Language Processing (NLP) chatbot aimed at automating various coding tasks. The chatbot was instrumental in boosting developer productivity by 25%, streamlining workflows, and reducing manual overhead.</div>
+                            <!-- <div class="project-card-link">Website-link</div> -->
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-title">SmartSQL: GPT-3 Driven English-to-SQL Query Translator</div><hr>
+                            <div class="project-card-description">Developed a specialized bot powered by GPT-3 that translates English text into SQL queries, with dynamic prompt engineering for optimal database interactions. Tailored to interface with a custom database schema, the bot offers a context-aware and user-friendly querying experience that streamlines database access and management.</div>
+                            <!-- <div class="project-card-link">Website-link</div> -->
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-title">From 2D to 3D: A Revolutionary Computer Vision Application for Architecture</div><hr>
+                            <div class="project-card-description">Engineered a cutting-edge Computer Vision application capable of transforming traditional 2D architectural blueprints into interactive 3D visual models. This innovation has fundamentally changed the way architects and clients engage with design plans, making the visualization process more intuitive and collaborative.</div>
+                            <!-- <div class="project-card-link">Website-link</div> -->
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-title">MythGen: Indian Mythology Storyline Synthesizer with NLP</div><hr>
+                            <div class="project-card-description">Developed an innovative NLP-driven application, MythGen, which utilizes the GPT-2 model to generate narrative storylines from Indian mythology. This application transforms simple prompts and genre selections into three unique story trajectories, enhancing the story creation process with AI-driven diversity and creativity.</div>
+                            <!-- <div class="project-card-link">Website-link</div> -->
+                        </div>
+                        
                     </div>
-                    <div class="project-card">
-                        <div class="project-card-title">From 2D to 3D: A Revolutionary Computer Vision Application for Architecture</div><hr>
-                        <div class="project-card-description">Engineered a cutting-edge Computer Vision application capable of transforming traditional 2D architectural blueprints into interactive 3D visual models. This innovation has fundamentally changed the way architects and clients engage with design plans, making the visualization process more intuitive and collaborative.</div>
-                        <!-- <div class="project-card-link">Website-link</div> -->
-                    </div>
+                    <!-- <button id="scrollRightBtn" class="scroll-btn right-scroll">&#10095;</button> -->
                 </div>
             </section>
         
@@ -143,6 +181,7 @@
     <script src="scripts/script.js"></script>
     <script src="scripts/scroll_effect.js"></script>
     <script src="scripts/set_height.js"></script>
+    <script src="scripts/projects.js"></script>
     <script src="scripts/about.js"></script>
 </body>
 </html>
