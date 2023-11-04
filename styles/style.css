@@ -22,6 +22,67 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
   }
 
 /* ==========================
+   PRELOADER
+   - Style settings for the Pre-loader.
+========================== */
+
+
+/* Styles for the loader */
+/* Styles for the loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white; 
+    z-index: 9999; 
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.loader-circle {
+    border: 16px solid black; 
+    border-top: 16px solid red; 
+    border-radius: 50%;
+    width: 10vw; 
+    height: 10vw; 
+    animation: spin 2s linear infinite; 
+    z-index: 9999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Keyframes for the spin effect */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide the loader after loading */
+#main-content {
+    display: none;
+}
+
+/* Show the content after the loader is gone */
+body.loaded #main-content {
+    display: block;
+}
+
+body.loaded #loader-wrapper {
+    display: none;
+}
+
+
+/* ==========================
    MOBILE DISPLAY WARNING
    - Style settings for the mobile warning overlay.
 ========================== */
