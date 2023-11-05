@@ -19,16 +19,12 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
 ::selection {
     background-color: black;
     color: white;
-  }
+}
 
 /* ==========================
    PRELOADER
    - Style settings for the Pre-loader.
 ========================== */
-
-
-/* Styles for the loader */
-/* Styles for the loader */
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -60,19 +56,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
     align-items: center;
 }
 
-
-/* Keyframes for the spin effect */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Hide the loader after loading */
 #main-content {
     display: none;
 }
 
-/* Show the content after the loader is gone */
 body.loaded #main-content {
     display: block;
 }
@@ -94,9 +86,10 @@ body.loaded #loader-wrapper {
     height: calc(var(--vh, 1vh) * 100);
     background-color: black;
     padding: 2em;
-    z-index: 1001;
+    z-index: 1002;
     display: none;
 }
+
 .mobile-warning-message {
     display: flex; 
     align-items: center; 
@@ -166,6 +159,7 @@ body {
     padding:2vw 0.5vw;
     border-right: 0.1vw solid #ccc;
     box-shadow: 0.3vw 0px 0.6vw rgba(0, 0, 0, 0.1);
+    z-index: 1001;
 }
 
 #navbar .logo{
@@ -334,7 +328,13 @@ body {
 
 .about-navbar li:hover {
     background-color: white;
+    color: black;
+}
+
+.about-navbar li.active:hover {
+    background-color: white;
     color: red;
+    cursor: default;
 }
 
 .about-container-wrapper{
@@ -384,8 +384,8 @@ body {
     content: ''; 
     position: absolute;
     left: 0.6vw;
-    bottom: 0;
-    top: 10.5vw ; 
+    bottom: 0.25vw;
+    top: 8.75vw;
     width: 0.25vw;
     margin-bottom: -3.5vw;
     background-color: black;
@@ -410,7 +410,7 @@ body {
     width: 1.8vw; 
     height: 1.8vw;
     background-color: black;
-    border: 0.4vw solid red;
+    border: 0.3vw solid red;
 }
 
 .milestone-content {
@@ -482,7 +482,13 @@ body {
 
 .project-navbar li:hover {
     background-color: white;
+    color: black;
+}
+
+.project-navbar li.active:hover {
+    background-color: white;
     color: red;
+    cursor: default;
 }
 
 .project-scroll-container {
@@ -498,62 +504,84 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width:  13vw; 
+    width: 20vw; 
     height: 100%;
-    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
     z-index: 2;
-  }
-  
-  .fade-right::after {
+}
+
+.fade-right::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 13vw;
+    width: 20vw; 
     height: 100%;
-    background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+    background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
     z-index: 2;
-  }
+}
+  
 
-  /* Main container */
-  .project-container {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      margin: 0 3vw;
-      padding: 2vh 0;
-      /* justify-content: center; */
-    }
+/* Main container */
+.project-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin: 0 3vw;
+    padding: 2vh 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.project-container::-webkit-scrollbar {
+    display: none;
+}
     
 /* Temporary for research cards */
 #research{
     justify-content: center;
 }
 
+.scroll-arrow-left,
+.scroll-arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  cursor: pointer;
+  user-select: none;
+  font-size: 3vw;
+  color: #333;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  padding: 1vw; 
+  transition: all 0.2s ease;
+}
+
+.scroll-arrow-left {
+  left: 1vw;
+}
+
+.scroll-arrow-right {
+  right: 1vw;
+}
+
+.scroll-arrow-left:hover,
+.scroll-arrow-right:hover{
+  transform: translateY(-50%) scale(1.3); 
+}
+
+.scroll-arrow-left.hidden,
+.scroll-arrow-right.hidden {
+  display: none;
+}
+
+
 .hidden {
     display: none;
-}
-
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5vw;
-}
-
-.left-scroll {
-    left: 0;
-}
-
-.right-scroll {
-    right: 0;
 }
   
 /* Individual project cards */
@@ -672,27 +700,32 @@ body {
    SCROLL BUTTONS
    - Floating buttons for scrolling the page.
 ========================== */
+  
 .scroll-button {
     position: fixed;
-    bottom: 2vw;
-    right: 2vw;
-    z-index: 1000;
-    font-size: 2vw;
-    line-height: 1;
-    padding: 0.7vw;
-    border: 0.18vw solid black;
-    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 1vh;
+    display: block;
+    font-size: 3vw;
+    padding:0vw 0vw;
+    border: none;
     color: black;
-    border-radius: 50%;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.4s ease, color 0.3s ease;
+    transition: all 0.2s ease;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.scroll-button:hover{
-    color: white;
-    background-color: rgba(0, 0, 0, 1);
-}
 #scrollUp {
-    bottom: 7vw;
+    left: calc(95vw/2);
 }
+
+#scrollDown {
+    right: calc(95vw/2);
+}
+
+.scroll-button:hover {
+    scale: 1.5;
+}
+
+  

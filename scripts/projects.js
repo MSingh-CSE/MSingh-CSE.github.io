@@ -1,50 +1,43 @@
 // Scroll on project cards
 const developmentContainer = document.querySelector('#development');
-
-// Scroll Buttons for projects section [In Future]
-// function getCurrentProjectContainer() {
-//     return document.querySelector('.project-container');
-//   }
-// const cards = getCurrentProjectContainer().querySelectorAll('.project-card');
-// const scrollAmount = cards[0].clientWidth;
-
-// document.getElementById('scrollLeftBtn').addEventListener('click', function() {
-//     const projectContainer = getCurrentProjectContainer();
-//     projectContainer.scrollBy({
-//         left: -scrollAmount,
-//         behavior: 'smooth'
-//       });
-//   });
-
-// document.getElementById('scrollRightBtn').addEventListener('click', function() {
-//     const projectContainer = getCurrentProjectContainer();
-//     projectContainer.scrollBy({
-//         left: scrollAmount,
-//         behavior: 'smooth'
-//       });
-//   });
-
-// --------------------------------------
-// Fade effect on cards
+const scrollArrowLeft = document.querySelector('#development .scroll-arrow-left');
+const scrollArrowRight = document.querySelector('#development .scroll-arrow-right');
 
 function checkScroll() {
   const maxScrollLeft = developmentContainer.scrollWidth - developmentContainer.clientWidth;
 
   if (developmentContainer.scrollLeft > 30) {
+    scrollArrowLeft.classList.remove('hidden');
     developmentContainer.classList.add('fade-left');
   } else {
+    scrollArrowLeft.classList.add('hidden');
     developmentContainer.classList.remove('fade-left');
   }
-  
+
   if (developmentContainer.scrollLeft < maxScrollLeft - 30) {
+    scrollArrowRight.classList.remove('hidden');
     developmentContainer.classList.add('fade-right');
   } else {
+    scrollArrowRight.classList.add('hidden');
     developmentContainer.classList.remove('fade-right');
   }
 }
 
-// Swtich sections logic
+scrollArrowLeft.addEventListener('click', function() {
+  developmentContainer.scrollBy({
+    left: -developmentContainer.offsetWidth / 2,
+    behavior: 'smooth'
+  });
+});
 
+scrollArrowRight.addEventListener('click', function() {
+  developmentContainer.scrollBy({
+    left: developmentContainer.offsetWidth / 2,
+    behavior: 'smooth'
+  });
+});
+
+// Swtich sections logic
 const researchLi = document.querySelector('.project-navbar ul li:nth-child(1)');
 const developmentLi = document.querySelector('.project-navbar ul li:nth-child(2)');
 
