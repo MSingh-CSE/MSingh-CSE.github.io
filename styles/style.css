@@ -201,8 +201,15 @@ body {
    - General layout and styling for each content section.
 ========================== */
 
+.all-sections-container{
+    height: calc(var(--vh, 1vh) * 100);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
 .content-section{
     height: calc(var(--vh, 1vh) * 100);
+    scroll-snap-align: start;
     padding: 1vw;
     margin-left: 5vw;  /* Navbar width */
     box-sizing: border-box;
