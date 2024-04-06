@@ -1,0 +1,63 @@
+
+/* ==========================
+   CONTACT ME SECTION
+   - General layout and styling for about section.
+========================== */
+
+.contact-title{
+    font-size: 5vw;
+    margin: 0vw 2vw;
+    margin-top: calc(var(--vh, 1vh) * 3);
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
+
+}
+.contact-image{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 0.5vw;
+}
+
+.contact-image img{
+    width :100%;
+    object-fit: cover;
+}
+
+
+#contact ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    height: 100%;
+    padding: 0;
+}
+
+#contact li {
+    margin: 0.5vw 0; 
+    /* padding: 1.5vw 3vw;  */
+
+} 
+
+#contact li a {
+    font-size: 2vw;
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s ease;
+
+}
+
+#contact li a:hover{
+    color: red;
+}
+

@@ -1,0 +1,72 @@
+
+/* ==========================
+   HOME SECTION
+   - General layout and styling for home section.
+========================== */
+
+.home-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0.5vw 2vw;
+}
+
+.home-content{
+    width: 60%;
+}
+
+.welcome{
+    font-size: 2vw;
+    line-height: 2em;
+}
+
+.name{
+    font-size: 6vw;
+    font-weight: 700;
+    font-family: 'Dancing Script';
+    text-align: center;
+}
+
+.title{
+    font-size: 1.5vw;
+    line-height: 3em;
+    text-align: center;
+}
+
+.summary{
+    font-size: 1.1vw;
+}
+
+
+.colored-bar{
+    /* animation: changeColor 10s infinite; */
+    font-weight: lighter;
+    font-size: 2vw;
+    color: red;
+}
+
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+    25% {
+        color: blue;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: orange;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.home-image{
+    width: 40%;
+}
+.home-image img{
+    width: 100%;
+}
