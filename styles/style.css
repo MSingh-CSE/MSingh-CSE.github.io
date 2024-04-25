@@ -73,7 +73,7 @@ body {
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 1.3s ease-out;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .content-section.visible {
