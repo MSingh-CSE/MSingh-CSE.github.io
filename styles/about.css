@@ -147,7 +147,7 @@
 @media (max-width: 600px) {
 
     .about-heading{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .about-navbar li {
@@ -158,7 +158,7 @@
     .milestone::before {
         left: 0.7rem;
         top: 100%;
-        bottom: -16rem;
+        bottom: -11rem;
     }
 
     .circle {
@@ -200,7 +200,7 @@
     .milestone::before {
         left: 0.7rem;
         top: 100%;
-        bottom: -15rem;
+        bottom: -10rem;
     }
 
     .circle {
