@@ -8,12 +8,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0vw 2vw;
-    margin-top: calc(var(--vh, 1vh) * 3);
 }
 
 .about-heading{
-    font-size: 5vw;
+    font-size: 4rem;
 }
 
 .about-navbar ul {
@@ -23,13 +21,13 @@
 }
 
 .about-navbar li {
-    font-size: 1.3vw;
+    font-size: 1.3rem;
     cursor: pointer;
     padding: 0.5em 2.5em;
     background-color: black;
     color: white;
     transition: background-color 0.3s, color 0.3s;
-    border: 0.1vw solid black;
+    border: 1px solid black;
 }
 .about-navbar li.active{
     background-color: white;
@@ -82,22 +80,25 @@
 .timeline {
     position: relative;
     width: 100%;
-    padding-left: 5vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 .milestone {
     position: relative; 
-    padding: 3.5vw 0;
+    padding: 2vh 0;
 }
 
 .milestone::before {
     content: ''; 
     position: absolute;
-    left: 0.6vw;
-    bottom: 0.25vw;
-    top: 8.75vw;
-    width: 0.25vw;
-    margin-bottom: -3.5vw;
+    left: 0.7rem;
+    bottom: -20vh;
+    top: 100%;
+    width: 0.2rem;
     background-color: black;
     z-index: 1;
 }
@@ -109,37 +110,120 @@
 .circle {
     position: absolute;
     top: calc(50% - 1vw); 
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 1.6rem; 
+    height: 1.6rem;
     background-color: black;
     border-radius: 50%;
     z-index: 2;
 }
 
 .milestone .circle.present {
-    width: 1.8vw; 
-    height: 1.8vw;
+    width: 2rem; 
+    height: 2rem;
     background-color: black;
-    border: 0.3vw solid red;
+    border: 0.4em solid red;
 }
 
 .milestone-content {
-    padding-left: 4vw; 
-    padding-right: 3.5vw;
+    padding-left: 3.2rem; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .name-and-location h2{
-    font-size: 2.2vw;
+    font-size: 2.2rem;
 }
 
 .name-and-location p{
-    font-size: 1.3vw;
+    font-size: 1.3rem;
 }
 
 .year p{
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .about-heading{
+        font-size: 2rem;
+    }
+
+    .about-navbar li {
+        font-size: 0.9rem;
+        padding: 0.2em 1em;
+    }
+
+    .milestone::before {
+        left: 0.7rem;
+        top: 100%;
+        bottom: -16rem;
+    }
+
+    .circle {
+        width: 1.5rem; 
+        height: 1.5rem;
+    }
+    
+    .milestone .circle.present {
+        width: 1.9rem; 
+        height: 1.9rem;
+        border: 0.4rem solid red;
+    }
+
+    .name-and-location h2{
+        font-size: 1.2rem;
+    }
+    
+    .name-and-location p{
+        font-size: 0.9rem;
+    }
+    
+    .year p{
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    
+    .about-heading{
+        font-size: 2.5rem;
+    }
+
+    .about-navbar li {
+        font-size: 1.2rem;
+        padding: 0.2em 1.6em;
+    }
+
+    .milestone::before {
+        left: 0.7rem;
+        top: 100%;
+        bottom: -15rem;
+    }
+
+    .circle {
+        width: 1.5rem; 
+        height: 1.5rem;
+    }
+    
+    .milestone .circle.present {
+        width: 1.9rem; 
+        height: 1.9rem;
+        border: 0.4rem solid red;
+    }
+
+    .name-and-location h2{
+        font-size: 1.8rem;
+    }
+    
+    .name-and-location p{
+        font-size: 1.4rem;
+    }
+    
+    .year p{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
 }
