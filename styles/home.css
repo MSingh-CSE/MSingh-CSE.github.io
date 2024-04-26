@@ -16,12 +16,12 @@
 }
 
 .welcome {
-    font-size: 2vw; 
+    font-size: 1.8vw; 
     line-height: 2em;
 }
 
 .name {
-    font-size: 6vw;
+    font-size: 4vw;
     font-weight: 700;
     font-family: 'Dancing Script', cursive; 
     text-align: center;
@@ -64,19 +64,19 @@
     }
 
     .welcome {
-        font-size: 1.3rem; 
+        font-size: 8vw; 
     }
     
     .name {
-        font-size: 2rem;
+        font-size: 10vw;
     }
     
     .title {
-        font-size: 1rem;
+        font-size: 5vw;
     }
     
     .summary {
-        font-size: 0.9rem;
+        font-size: 3.8vw;
     }
 }
 
@@ -96,18 +96,18 @@
     }
 
     .welcome {
-        font-size: 2rem; 
+        font-size: 6vw; 
     }
     
     .name {
-        font-size: 5rem;
+        font-size: 8vw;
     }
     
     .title {
-        font-size: 2.3rem;
+        font-size: 4vw;
     }
     
     .summary {
-        font-size: 1.4rem;
+        font-size: 3.2vw;
     }
 }
