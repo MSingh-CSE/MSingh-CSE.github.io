@@ -228,11 +228,11 @@
     }
     
     .project-card-title {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
     
     .project-card-description {
-        font-size: 0.4rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -259,11 +259,11 @@
     }
     
     .project-card-title {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
     
     .project-card-description {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     } 
 }
   
