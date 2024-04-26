@@ -122,7 +122,7 @@
   z-index: 3;
   cursor: pointer;
   user-select: none;
-  font-size: 3vw;
+  font-size: 2.8rem;
   color: #333;
   background: rgba(255, 255, 255, 0);
   border-radius: 50%;
@@ -155,7 +155,7 @@
   
 /* Individual project cards */
 .project-card {
-    max-width:30vw;
+    max-width:25vw;
     flex: 0 0 auto;
     margin: 1vw;
     background-color: white;
