@@ -155,8 +155,7 @@
   
 /* Individual project cards */
 .project-card {
-    max-width: 30%;
-    min-width: 25%;
+    max-width:30vw;
     flex: 0 0 auto;
     margin: 1vw;
     background-color: white;
@@ -215,9 +214,21 @@
         font-size: 0.9rem;
         padding: 0.2em 1em;
     }
+
+    #research.project-container {
+        flex-direction: column;
+    }
+
+    #research .project-card {
+        max-width:60vw;
+    }
+
+    #development .project-card {
+        max-width:45vw;
+    }
     
     .project-card-title {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .project-card-description {
@@ -234,9 +245,21 @@
         font-size: 1.2rem;
         padding: 0.2em 1.6em;
     }
+
+    #research.project-container {
+        flex-direction: column;
+    }
+
+    #research .project-card {
+        max-width:60vw;
+    }
+
+    #development .project-card {
+        max-width:45vw;
+    }
     
     .project-card-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     
     .project-card-description {
