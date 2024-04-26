@@ -5,7 +5,7 @@
 ========================== */
 
 .contact-title{
-    font-size: 4vw;
+    font-size:  calc((var(--vh, 1vh) * 100) / 50 + 3vw);
 }
 
 .contact-center{
@@ -30,7 +30,7 @@
 }
 
 .contact-image img{
-    width :100%;
+    width :90%;
     object-fit: cover;
 }
 
@@ -38,7 +38,7 @@
 #contact ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     list-style-type: none;
     height: 100%;
     padding: 0;
@@ -51,7 +51,7 @@
 } 
 
 #contact li a {
-    font-size: 1.8vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 60 + 1.2vw);
     text-decoration: none;
     color: black;
     transition: color 0.2s ease;
@@ -63,9 +63,6 @@
 }
 
 @media (max-width: 600px) {
-    .contact-title{
-        font-size: 6vw;
-    }
     
     .contact-image{
         display: none;
@@ -78,27 +75,11 @@
     .contact-center{
         align-items: center;
     }
-
-    #contact li a {
-        font-size: 6vw;
-    }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-    .contact-title{
-        font-size: 7vw;
-    }
-
     .contact-image{
         display: none;
-    }
-
-    .contact-content{
-        height: 100%;
-    }
-
-    #contact li a {
-        font-size: 4vw;
     }
 }
 

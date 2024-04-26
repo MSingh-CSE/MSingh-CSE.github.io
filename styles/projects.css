@@ -12,7 +12,7 @@
 }
 
 .project-heading{
-    font-size: 4vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 3vw);
 }
 
 /* Navigation bar styling */
@@ -28,7 +28,7 @@
 }
 
 .project-navbar li {
-    font-size: 1.3vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.8vw);
     cursor: pointer;
     padding: 0.5em 2.5em;
     background-color: black;
@@ -180,14 +180,14 @@
   
 /* Project card title */
 .project-card-title {
-    font-size: 1.3vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 0.6vw);
     margin-bottom: 10px;
     font-weight: bold;
 }
   
 /* Project card description */
 .project-card-description {
-    font-size: 0.9vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.3vw);
     margin-bottom: 20px;
     text-align: justify;
     text-justify: inter-word;
@@ -206,15 +206,6 @@
 
 @media (max-width: 600px) {
 
-    .project-heading{
-        font-size: 6vw;
-    }
-
-    .project-navbar li {
-        font-size: 4vw;
-        padding: 0.2em 1em;
-    }
-
     #research.project-container {
         flex-direction: column;
     }
@@ -225,26 +216,10 @@
 
     #development .project-card {
         max-width:45vw;
-    }
-    
-    .project-card-title {
-        font-size: 4vw;
-    }
-    
-    .project-card-description {
-        font-size: 3.2vw;
     }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-    .project-heading{
-        font-size: 7vw;
-    }
-
-    .project-navbar li {
-        font-size: 3vw;
-        padding: 0.2em 1.6em;
-    }
 
     #research.project-container {
         flex-direction: column;
@@ -256,14 +231,6 @@
 
     #development .project-card {
         max-width:45vw;
-    }
-    
-    .project-card-title {
-        font-size: 3.2vw;
-    }
-    
-    .project-card-description {
-        font-size: 2.4vw;
     }
 }
   

@@ -11,7 +11,7 @@
 }
 
 .about-heading{
-    font-size: 4vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 3vw);
 }
 
 .about-navbar ul {
@@ -21,7 +21,7 @@
 }
 
 .about-navbar li {
-    font-size: 1.3vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.8vw);
     cursor: pointer;
     padding: 0.5em 2.5em;
     background-color: black;
@@ -132,98 +132,14 @@
 }
 
 .name-and-location h2{
-    font-size: 2.2vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 1vw);
 }
 
 .name-and-location p{
-    font-size: 1.3vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 75 + 1vw);
 }
 
 .year p{
-    font-size: 1.2vw;
+    font-size: calc((var(--vh, 1vh) * 100) / 75 + 0.8vw);
     font-weight: bold;
-}
-
-@media (max-width: 600px) {
-
-    .about-heading{
-        font-size: 6vw;
-    }
-
-    .about-navbar li {
-        font-size: 4vw;
-        padding: 0.2em 1em;
-    }
-
-    .milestone::before {
-        left: 0.7rem;
-        top: 100%;
-        bottom: -11rem;
-    }
-
-    .circle {
-        width: 1.5rem; 
-        height: 1.5rem;
-    }
-    
-    .milestone .circle.present {
-        width: 1.9rem; 
-        height: 1.9rem;
-        border: 0.4rem solid red;
-    }
-
-    .name-and-location h2{
-        font-size: 4vw;
-    }
-    
-    .name-and-location p{
-        font-size: 3vw;
-    }
-    
-    .year p{
-        font-size: 2vw;
-        font-weight: bold;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-    
-    .about-heading{
-        font-size: 7vw;
-    }
-
-    .about-navbar li {
-        font-size: 3vw;
-        padding: 0.2em 1.6em;
-    }
-
-    .milestone::before {
-        left: 0.7rem;
-        top: 100%;
-        bottom: -10rem;
-    }
-
-    .circle {
-        width: 1.5rem; 
-        height: 1.5rem;
-    }
-    
-    .milestone .circle.present {
-        width: 1.9rem; 
-        height: 1.9rem;
-        border: 0.4rem solid red;
-    }
-
-    .name-and-location h2{
-        font-size: 3.5vw;
-    }
-    
-    .name-and-location p{
-        font-size: 2.8vw;
-    }
-    
-    .year p{
-        font-size: 1.8vw;
-        font-weight: bold;
-    }
 }
