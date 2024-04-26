@@ -188,7 +188,7 @@
 /* Project card description */
 .project-card-description {
     font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.3vw);
-    margin-bottom: 20px;
+    margin-bottom: 0.3vh;
     text-align: justify;
     text-justify: inter-word;
 }
