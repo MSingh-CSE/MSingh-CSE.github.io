@@ -227,11 +227,11 @@
     }
 
     #research .project-card {
-        max-width:60vw;
+        max-width:30vw;
     }
 
     #development .project-card {
-        max-width:45vw;
+        max-width:35vw;
     }
 }
   
