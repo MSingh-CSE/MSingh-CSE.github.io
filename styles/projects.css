@@ -67,6 +67,7 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 3vw;
+    overflow-y: visible;
 }
 
 .fade-left::before {
@@ -162,7 +163,7 @@
     color: black;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    box-shadow: 0vw 0vw 2vw rgba(0, 0, 0, 0.2), 0vw 1.5vw 2vw rgba(0, 0, 0, 0.2);
+    box-shadow: 0vw 0vw 1.3vw rgba(0, 0, 0, 0.2), 0vw 0vw 1.6vw rgba(0, 0, 0, 0.2);
 
     padding: calc(var(--vh, 1vh) * 2) 2vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -222,7 +223,7 @@
 @media (min-width: 601px) and (max-width: 900px) {
 
     #research.project-container {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     #research .project-card {
