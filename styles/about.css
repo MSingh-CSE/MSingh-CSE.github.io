@@ -96,9 +96,10 @@
     content: ''; 
     position: absolute;
     left: 0.8rem;
-    bottom: -100%;
+    border-radius: 120px;
+    bottom: -16vh;
     top: 100%;
-    width: calc((var(--vh, 1vh) * 0.1) + 0.2vw);
+    width: 0.2rem;
     background-color: black;
     z-index: 1;
 }
