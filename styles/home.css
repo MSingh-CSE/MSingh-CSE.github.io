@@ -16,7 +16,7 @@
 }
 
 .welcome {
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 1vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.8vw);
     line-height: 2em;
 }
 
@@ -28,15 +28,16 @@
 }
 
 .title {
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 1vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
     text-align: center;
     margin-bottom: 0.4em;
 }
 
 .summary {
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.5vw);
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.3em;
 }
 
 .home-image {
