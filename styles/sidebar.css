@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-right: 0.1vw solid #ccc;
+    border-right: 0.1vw solid rgb(var(--text-color));
     /* box-shadow: 0px 0px 5em 2em rgba(0, 0, 0, 0.2); */
     z-index: 1001;
 }
@@ -47,7 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: rgb(var(--text-color));
     text-decoration: none;
     transition: all 0.4s ease;
     text-align: center;
@@ -62,12 +62,12 @@
 }
 
 #navbar ul li a.active{
-    color: red;
+    color: rgb(var(--highlight-color));
 }
 
 
 #navbar ul li a:hover{
-    color: red;
+    color: rgb(var(--highlight-color));
 }
 
 @media (max-width: 600px) {
@@ -89,20 +89,20 @@
     }
 
     #navbar ul li a{
-        color: black;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
+        color: rgb(var(--text-color));
+        border-bottom: 1px solid rgb(var(--text-color));
+        border-right: 1px solid rgb(var(--text-color));
     }
     
     #navbar ul li a.active{
-        color: red;
-        background-color: black;
+        color: rgb(var(--highlight-color));
+        background-color: rgb(var(--text-color));
     }
     
     
     #navbar ul li a:hover{
-        color: red;
-        background-color: black;
+        color: rgb(var(--highlight-color));
+        background-color: rgb(var(--text-color));
     }
 }
 
@@ -125,19 +125,19 @@
     }
 
     #navbar ul li a{
-        color: black;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
+        color: rgb(var(--text-color));
+        border-bottom: 1px solid rgb(var(--text-color));
+        border-right: 1px solid rgb(var(--text-color));
     }
     
     #navbar ul li a.active{
-        color: red;
-        background-color: black;
+        color: rgb(var(--highlight-color));
+        background-color: rgb(var(--text-color));
     }
     
     
     #navbar ul li a:hover{
-        color: red;
-        background-color: black;
+        color: rgb(var(--highlight-color));
+        background-color: rgb(var(--text-color));
     }
 }

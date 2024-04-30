@@ -45,7 +45,7 @@
                         <p class="summary">Current CS Graduate Student at Dalhousie University, deeply committed to advancing the field of artificial intelligence. My enthusiasm for applying AI technologies to solve complex challenges is supported by a solid technical background in Python, Deep Learning, NLP, Pytorch, and many more tools and frameworks. My Master’s research is centered on interpreting neurons in transformer-based large language models, a cutting-edge area that underpins many modern AI applications. This work not only deepens our understanding of complex model behaviors but also opens doors to a wide range of possibilities in AI development.</p>
                     </div>
                     <div class="home-image">
-                        <img src="images/Neural_Network.png" alt="Neural Network Image">
+                        <img class="theme-image" data-light="images/Neural_Network.png" data-dark="images/Neural_Network_Dark.png" src="images/Neural_Network.png" alt="Neural Network Image">
                     </div>
                 </div>
                 
@@ -182,14 +182,33 @@
                                 <li><a href="documents/resume.pdf" target="_blank">Download my resume</a></li>
                             </ul>
                         </div>
-                        <div class="contact-image"><img src="/images/contact.png" alt="contact me"></div>
+                        <div class="contact-image">
+                            <img class="theme-image" data-light="/images/contact.png" data-dark="/images/contact_Dark.png" src="/images/contact.png" alt="contact me img">
+                        </div>
                     </div>
                 </div>
             </section>
         </article>
-          
+        <button id="theme-toggle" class="toggle-btn">
+            <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun" style="display: none;">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="icon-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon" style="display: none;">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        
     </main>
     <script src="scripts/preloader.js"></script>
+    <script src="scripts/theme_switch.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/scroll_effect.js"></script>
     <script src="scripts/set_height.js"></script>

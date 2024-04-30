@@ -53,13 +53,13 @@
 #contact li a {
     font-size: calc((var(--vh, 1vh) * 100) / 60 + 1.2vw);
     text-decoration: none;
-    color: black;
+    color: rgb(var(--text-color));
     transition: color 0.2s ease;
 
 }
 
 #contact li a:hover{
-    color: red;
+    color: rgb(var(--highlight-color));
 }
 
 @media (max-width: 600px) {
