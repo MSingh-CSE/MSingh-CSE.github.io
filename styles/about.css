@@ -123,7 +123,7 @@
     height: 2rem;
     background-color: rgb(var(--text-color));
     border: 0.4em solid rgb(var(--highlight-color));
-    box-shadow: 0vw 0vw 1vw 0.5vw rgba(var(--highlight-color), 0.4);
+    box-shadow: 0vw 0vw 8px 8px rgba(var(--highlight-color), 0.4);
 }
 
 .milestone-content {
