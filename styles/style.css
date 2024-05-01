@@ -3,15 +3,6 @@
    - Resets styling for standard HTML elements.
 ========================== */
 /* Default light theme */
-/* :root {
-    --background-color: 255, 255, 255;
-    --text-color: 0, 0, 0;
-    --button-background: #eee;
-    --button-text: 0, 0, 0;
-    --highlight-color: 255, 0, 0; 
-    --project-slider-arrow: 51, 51, 51;
-    --card-shadow: 0, 0, 0, 0.2; 
-} */
 
 :root {
     --background-color: 249, 250, 251;
@@ -20,7 +11,7 @@
     --button-text: 0, 0, 0;
     --highlight-color: 255, 0, 0; 
     --project-slider-arrow: 51, 51, 51;
-    --card-shadow: 0, 0, 0, 0.2; 
+    --project-shadow: rgba(var(--highlight-color), 0.1);
 }
 
 .dark-theme {
@@ -30,7 +21,7 @@
     --button-text: 255, 255, 255;  
     --highlight-color: 0, 95, 255;  
     --project-slider-arrow: 255, 255, 255;
-    --card-shadow: 0, 0, 0, 0.3;  
+    --project-shadow: rgba(var(--highlight-color), 0.3);
 }
 
 
@@ -48,8 +39,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li, form, label {
 }
 
 ::selection {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: rgb(var(--text-color));
+    color: rgb(var(--background-color));
 }
 
 /* ==========================
@@ -120,8 +111,8 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 2vh;
+    right: 1.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,12 +126,10 @@ body {
 
 .toggle-btn svg {
     fill: currentColor; 
-    width: 2.5rem;
-    height: 2.5rem;
+    width: calc((var(--vh, 1vh) * 100) / 50 + 1vw);
+    height: calc((var(--vh, 1vh) * 100) / 50 + 1vw);
     display: none; 
 }
-
-
 
 .content-section.visible {
     opacity: 1;
