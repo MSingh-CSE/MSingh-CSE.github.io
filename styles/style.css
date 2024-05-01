@@ -75,7 +75,7 @@ body {
 /* For Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: black rgba(0, 0, 0, 0.1);
+    scrollbar-color: rgba(var(--text-color), 1) rgba(0, 0, 0, 0.1);
 }
 
 /* ==========================
@@ -114,6 +114,11 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 99999;
+    transition: color 0.3s ease-in-out;
+}
+
+.toggle-btn:hover{
+    color: rgba(var(--highlight-color), 1);
 }
 
 .toggle-btn svg {
