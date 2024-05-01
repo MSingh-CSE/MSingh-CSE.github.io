@@ -161,12 +161,13 @@
     margin: 1vw;
     background-color: var(--background-color);
     color: var(--text-color);
-    border: 1px solid rgba(var(--text-color), 0.2);
+    border: 1px solid rgba(var(--highlight-color), 0.5);
     border-radius: 8px;
     box-shadow: 0vw 0vw 1.3vw rgba(var(--highlight-color), 0.2), 0vw 0vw 1.6vw rgba(var(--highlight-color), 0.2);
 
     padding: calc(var(--vh, 1vh) * 2) 2vw;
     transition: transform 0.3s ease;
+    cursor: pointer;
     /* text-align: center; */
 }
 
