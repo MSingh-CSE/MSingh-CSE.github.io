@@ -120,7 +120,7 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-.toggle-btn:hover{
+body.hasHover .toggle-btn:hover{
     color: rgba(var(--highlight-color), 1);
 }
 

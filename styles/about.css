@@ -34,12 +34,12 @@
     color: rgb(var(--highlight-color));
 }
 
-.about-navbar li:hover {
+body.hasHover .about-navbar li:hover {
     background-color: rgb(var(--background-color));
     color: rgb(var(--text-color));
 }
 
-.about-navbar li.active:hover {
+body.hasHover .about-navbar li.active:hover {
     background-color: rgb(var(--background-color));
     color: rgb(var(--highlight-color));
     cursor: default;

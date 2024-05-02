@@ -52,7 +52,7 @@
 
 }
 
-#contact li a:hover{
+body.hasHover #contact li a:hover{
     color: rgb(var(--highlight-color));
 }
 

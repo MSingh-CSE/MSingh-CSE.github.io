@@ -43,12 +43,12 @@
     color: rgb(var(--highlight-color));
 }
 
-.project-navbar li:hover {
+body.hasHover .project-navbar li:hover {
     background-color: rgb(var(--background-color));
     color: rgb(var(--text-color));
 }
 
-.project-navbar li.active:hover {
+body.hasHover .project-navbar li.active:hover {
     background-color: rgb(var(--background-color));
     color: rgb(var(--highlight-color));
     cursor: default;
@@ -139,8 +139,8 @@
   right: 1vw;
 }
 
-.scroll-arrow-left:hover,
-.scroll-arrow-right:hover{
+body.hasHover .scroll-arrow-left:hover,
+body.hasHover .scroll-arrow-right:hover{
   transform: translateY(-50%) scale(1.4); 
 }
 
@@ -175,7 +175,7 @@
     border-color: rgb(var(--highlight-color));
 }
 
-.project-card:hover {
+body.hasHover .project-card:hover {
     transform: translateY(-0.5vw);
     box-shadow: 0vw -0.6vw 0.8vw var(--project-shadow), 0vw 0.6vw 0.8vw var(--project-shadow);
 }
@@ -201,7 +201,7 @@
     text-decoration: underline;
 }
 
-.project-card-link:hover{
+body.hasHover .project-card-link:hover{
     text-decoration: underline;
 }
 
