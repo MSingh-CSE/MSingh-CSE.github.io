@@ -123,7 +123,7 @@ body.hasHover .project-navbar li.active:hover {
   z-index: 3;
   cursor: pointer;
   user-select: none;
-  font-size: 2.8vw;
+  font-size: calc((var(--vh, 1vh) * 100) / 35 + 2vw);
   color: var(--project-slider-arrow);
   background: rgba(255, 255, 255, 0);
   border-radius: 50%;
