@@ -37,80 +37,108 @@ scrollArrowRight.addEventListener('click', function() {
   });
 });
 
-// Swtich sections logic
-const researchLi = document.querySelector('.project-navbar ul li:nth-child(1)');
-const developmentLi = document.querySelector('.project-navbar ul li:nth-child(2)');
-
+// Switch sections logic
 let currentProjectSection = null;
+let projectAnimationController = null;
 
-function fadeElementProject(element, opacity, duration) {
-    return new Promise(resolve => {
-      element.style.transition = `opacity ${duration}ms ease`;
-      element.style.opacity = opacity;
-      element.style.pointerEvents = opacity === 0 ? 'none' : 'all'; 
-      setTimeout(() => {
-        resolve();
-      }, duration);
+function fadeElementProject(element, opacity, duration, signal) {
+  return new Promise((resolve, reject) => {
+    if (signal.aborted) {
+      reject(new DOMException('Aborted', 'AbortError'));
+      return;
+    }
+
+    element.style.transition = `opacity ${duration}ms ease`;
+    element.style.opacity = opacity;
+    element.style.pointerEvents = opacity === 0 ? 'none' : 'all'; 
+
+    const timeoutId = setTimeout(() => {
+      resolve();
+    }, duration);
+
+    signal.addEventListener('abort', () => {
+      clearTimeout(timeoutId);
+      element.style.transition = ''; 
+      reject(new DOMException('Aborted', 'AbortError'));
     });
-  }
+  });
+}
   
 
 function showProjectSection(sectionId) {
+    
     if (currentProjectSection === sectionId) {
       return;
     }
-  
+
+    if (projectAnimationController) {
+      projectAnimationController.abort(); 
+    }
+    
+    projectAnimationController = new AbortController();  
+    const signal = projectAnimationController.signal;
+
     const targetSection = document.getElementById(sectionId);
-    let oldSection = currentProjectSection ? document.getElementById(currentProjectSection) : null;
-  
+    const researchLi = document.querySelector('.project-navbar ul li:nth-child(1)');
+    const developmentLi = document.querySelector('.project-navbar ul li:nth-child(2)');
+
     researchLi.classList.remove('active');
     developmentLi.classList.remove('active');
+
     if (sectionId === 'research') {
       researchLi.classList.add('active');
     } else if (sectionId === 'development') {
       developmentLi.classList.add('active');
     }
 
-    Promise.resolve()
-      .then(() => {
-        if (oldSection) {
-          return fadeElementProject(oldSection, 0, 500);
-        }
-      })
-      .then(() => {
-        if (oldSection) {
-          oldSection.style.display = "none";
-        }
-        targetSection.style.display = "flex";
-        targetSection.style.opacity = "0"; 
-        checkScroll();
-        return Promise.resolve();
-      })
-      .then(() => {
-        return fadeElementProject(targetSection, 1, 500); // Fade in
-      })
-      .then(() => {
-        currentProjectSection = sectionId;
-      });
-  }
-  
+    let oldSection = currentProjectSection ? document.getElementById(currentProjectSection) : null;
+    currentProjectSection = sectionId;
 
+    Promise.resolve()
+    .then(() => {
+        if (oldSection) {
+            return fadeElement(oldSection, 0, 500, signal);
+        }
+    })
+    .then(() => {
+        if (oldSection) {
+            oldSection.style.display = "none";
+        }
+        targetSection.style.display = "flex"; 
+        window.requestAnimationFrame(() => {
+          checkScroll();  
+        });
+        return fadeElement(targetSection, 1, 500, signal);
+    })
+    .then(() => {
+      checkScroll();  
+    })
+    .catch(error => {
+        if (error.name !== 'AbortError') {
+            console.error('Animation failed:', error);
+        }
+    });
+}
+
+window.addEventListener('resize', checkScroll);
+  
 document.addEventListener("DOMContentLoaded", function() {
     showProjectSection("research");
-    researchLi.classList.add('active'); 
-  
+    
+    const researchLi = document.querySelector('.project-navbar ul li:nth-child(1)');
+    const developmentLi = document.querySelector('.project-navbar ul li:nth-child(2)');
+    
     researchLi.addEventListener('click', function() {
       showProjectSection('research');
     });
-  
+    
     developmentLi.addEventListener('click', function() {
       showProjectSection('development');
     });
-  
+    
     developmentContainer.addEventListener('scroll', function() {
-developmentContainer.scrollTimeout = setTimeout(checkScroll, 0);
-  });
-
-  checkScroll();
+      developmentContainer.scrollTimeout = setTimeout(checkScroll, 0);
+    });
+    checkScroll();
+    
 });
-
