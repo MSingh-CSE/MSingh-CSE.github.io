@@ -61,5 +61,9 @@ body.hasHover #contact li a:hover{
     .contact-content{
         height: 100%;
     }
+
+    #contact ul {
+        height: 40%;
+    }
 }
 
