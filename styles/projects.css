@@ -58,7 +58,7 @@ body.hasHover .project-navbar li.active:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(var(--vh, 1vh) * 90);
+    height: calc(var(--vh, 1vh) * 85);
 }
 
 .project-scroll-container {
@@ -219,6 +219,10 @@ body.hasHover .project-card-link:hover{
 
     #development .project-card {
         max-width:45vw;
+    }
+    
+    .projects-center{
+        height: calc(var(--vh, 1vh) * 90);
     }
 }
 
