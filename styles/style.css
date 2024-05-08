@@ -6,22 +6,25 @@
 
 :root {
     --background-color: 249, 250, 251;
-    --text-color: 0, 0, 0;
+    --text-color: 8, 8, 8;
     --button-background: #eee;
     --button-text: 0, 0, 0;
     --highlight-color: 255, 0, 0; 
     --project-slider-arrow: 51, 51, 51;
-    --project-shadow: rgba(var(--highlight-color), 0.1);
+    --project-shadow: rgba(var(--highlight-color), 0.2);
+    --text-highlight: 39, 159, 255;
 }
 
 .dark-theme {
-    --background-color: 0, 0, 0;  
+    --background-color: 8, 8, 8;  
     --text-color: 249, 250, 251;  
     --button-background: 18, 18, 18;  
     --button-text: 255, 255, 255;  
-    --highlight-color: 0, 95, 255;  
+    --highlight-color: 0, 128, 255;  
+    /* --highlight-color: 0, 95, 255;   */
     --project-slider-arrow: 255, 255, 255;
     --project-shadow: rgba(var(--highlight-color), 0.3);
+    --text-highlight: 39, 159, 255;
 }
 
 

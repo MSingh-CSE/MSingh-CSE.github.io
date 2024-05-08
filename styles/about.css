@@ -80,7 +80,7 @@ body.hasHover .about-navbar li.active:hover {
 .timeline {
     position: relative;
     width: 100%;
-    height: 83%;
+    height: calc(var(--vh, 1vh) * 90);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -98,7 +98,7 @@ body.hasHover .about-navbar li.active:hover {
     left: 0.8rem;
     border-radius: 120px;
     bottom: -16vh;
-    top: 100%;
+    top: 90%;
     width: 0.2rem;
     background-color: rgb(var(--text-color));
     z-index: 1;
@@ -134,14 +134,51 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .name-and-location h2{
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 1vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 1.2vw);
 }
 
 .name-and-location p{
     font-size: calc((var(--vh, 1vh) * 100) / 75 + 1vw);
 }
 
+.journey-context{
+    font-size: calc((var(--vh, 1vh) * 100) / 80 + 0.6vw);
+    padding-left: 3.5rem; 
+    width: 70%;
+    margin: 0.25em 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .year p{
     font-size: calc((var(--vh, 1vh) * 100) / 75 + 0.8vw);
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .milestone-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .journey-context{
+        font-size: calc((var(--vh, 1vh) * 100) / 80 + 0.9vw);
+        width: 90%;
+        margin: 0.35em 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .milestone-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .journey-context{
+        font-size: calc((var(--vh, 1vh) * 100) / 80 + 0.8vw);
+        width: 90%;
+        margin: 0.35em 0;
+    }
 }
