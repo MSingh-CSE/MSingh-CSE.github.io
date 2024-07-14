@@ -28,7 +28,7 @@
 }
 
 .project-navbar li {
-    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.9vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.8vw);
     cursor: pointer;
     padding: 0.5em 4vw;
     background-color: rgb(var(--text-color));
@@ -218,7 +218,7 @@ body.hasHover .project-card-link:hover{
     }
 
     #development .project-card {
-        max-width:45vw;
+        max-width:60vw;
     }
     
     .projects-center{
@@ -233,11 +233,11 @@ body.hasHover .project-card-link:hover{
     }
 
     #research .project-card {
-        max-width:35vw;
+        max-width:40vw;
     }
 
     #development .project-card {
-        max-width:35vw;
+        max-width:40vw;
     }
 }
   
