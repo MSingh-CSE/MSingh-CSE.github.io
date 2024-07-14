@@ -21,9 +21,9 @@
 }
 
 .about-navbar li {
-    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.8vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 1vw);
     cursor: pointer;
-    padding: 0.5em 2.5em;
+    padding: 0.5em 4vw;
     background-color: rgb(var(--text-color));
     color: rgb(var(--background-color));
     transition: background-color 0.3s, color 0.3s;

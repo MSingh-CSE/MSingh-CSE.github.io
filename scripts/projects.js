@@ -1,41 +1,80 @@
 // Scroll on project cards
 const developmentContainer = document.querySelector('#development');
-const scrollArrowLeft = document.querySelector('#development .scroll-arrow-left');
-const scrollArrowRight = document.querySelector('#development .scroll-arrow-right');
+const scrollArrowLeftDevelopment = document.querySelector('#development .scroll-arrow-left');
+const scrollArrowRightDevelopment = document.querySelector('#development .scroll-arrow-right');
 
-function checkScroll() {
+const researchContainer = document.querySelector('#research');
+const scrollArrowLeftResearch = document.querySelector('#research .scroll-arrow-left');
+const scrollArrowRightResearch = document.querySelector('#research .scroll-arrow-right');
+
+function checkScrollDevelopment() {
   const maxScrollLeft = developmentContainer.scrollWidth - developmentContainer.clientWidth;
 
   if (developmentContainer.scrollLeft > 30) {
-    scrollArrowLeft.classList.remove('hidden');
+    scrollArrowLeftDevelopment.classList.remove('hidden');
     developmentContainer.classList.add('fade-left');
   } else {
-    scrollArrowLeft.classList.add('hidden');
+    scrollArrowLeftDevelopment.classList.add('hidden');
     developmentContainer.classList.remove('fade-left');
   }
 
   if (developmentContainer.scrollLeft < maxScrollLeft - 30) {
-    scrollArrowRight.classList.remove('hidden');
+    scrollArrowRightDevelopment.classList.remove('hidden');
     developmentContainer.classList.add('fade-right');
   } else {
-    scrollArrowRight.classList.add('hidden');
+    scrollArrowRightDevelopment.classList.add('hidden');
     developmentContainer.classList.remove('fade-right');
   }
 }
 
-scrollArrowLeft.addEventListener('click', function() {
+function checkScrollResearch() {
+  const maxScrollLeft = researchContainer.scrollWidth - researchContainer.clientWidth;
+
+  if (researchContainer.scrollLeft > 30) {
+    scrollArrowLeftResearch.classList.remove('hidden');
+    researchContainer.classList.add('fade-left');
+  } else {
+    scrollArrowLeftResearch.classList.add('hidden');
+    researchContainer.classList.remove('fade-left');
+  }
+
+  if (researchContainer.scrollLeft < maxScrollLeft - 30) {
+    scrollArrowRightResearch.classList.remove('hidden');
+    researchContainer.classList.add('fade-right');
+  } else {
+    scrollArrowRightResearch.classList.add('hidden');
+    researchContainer.classList.remove('fade-right');
+  }
+}
+
+scrollArrowLeftDevelopment.addEventListener('click', function() {
   developmentContainer.scrollBy({
     left: -developmentContainer.offsetWidth / 2,
     behavior: 'smooth'
   });
 });
 
-scrollArrowRight.addEventListener('click', function() {
+scrollArrowRightDevelopment.addEventListener('click', function() {
   developmentContainer.scrollBy({
     left: developmentContainer.offsetWidth / 2,
     behavior: 'smooth'
   });
 });
+
+scrollArrowLeftResearch.addEventListener('click', function() {
+  researchContainer.scrollBy({
+    left: -researchContainer.offsetWidth / 2,
+    behavior: 'smooth'
+  });
+});
+
+scrollArrowRightResearch.addEventListener('click', function() {
+  researchContainer.scrollBy({
+    left: researchContainer.offsetWidth / 2,
+    behavior: 'smooth'
+  });
+});
+
 
 // Switch sections logic
 let currentProjectSection = null;
@@ -106,12 +145,14 @@ function showProjectSection(sectionId) {
         }
         targetSection.style.display = "flex"; 
         window.requestAnimationFrame(() => {
-          checkScroll();  
+          checkScrollDevelopment();  
+          checkScrollResearch();
         });
         return fadeElement(targetSection, 1, 500, signal);
     })
     .then(() => {
-      checkScroll();  
+      checkScrollDevelopment();  
+      checkScrollResearch();
     })
     .catch(error => {
         if (error.name !== 'AbortError') {
@@ -120,7 +161,8 @@ function showProjectSection(sectionId) {
     });
 }
 
-window.addEventListener('resize', checkScroll);
+window.addEventListener('resize', checkScrollDevelopment);
+window.addEventListener('resize', checkScrollResearch);
   
 document.addEventListener("DOMContentLoaded", function() {
     showProjectSection("research");
@@ -131,14 +173,19 @@ document.addEventListener("DOMContentLoaded", function() {
     researchLi.addEventListener('click', function() {
       showProjectSection('research');
     });
+
+    researchContainer.addEventListener('scroll', function() {
+      researchContainer.scrollTimeout = setTimeout(checkScrollResearch, 0);
+    });
+    checkScrollResearch();
     
     developmentLi.addEventListener('click', function() {
       showProjectSection('development');
     });
     
     developmentContainer.addEventListener('scroll', function() {
-      developmentContainer.scrollTimeout = setTimeout(checkScroll, 0);
+      developmentContainer.scrollTimeout = setTimeout(checkScrollDevelopment, 0);
     });
-    checkScroll();
+    checkScrollDevelopment();
     
 });

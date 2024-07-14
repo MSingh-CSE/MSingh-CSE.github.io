@@ -28,9 +28,9 @@
 }
 
 .project-navbar li {
-    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.8vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 1vw);
     cursor: pointer;
-    padding: 0.5em 2.5em;
+    padding: 0.5em 4vw;
     background-color: rgb(var(--text-color));
     color: rgb(var(--background-color));
     transition: background-color 0.3s, color 0.3s;
@@ -111,9 +111,9 @@ body.hasHover .project-navbar li.active:hover {
 }
     
 /* Temporary for research cards */
-#research{
+/* #research{
     justify-content: center;
-}
+} */
 
 .scroll-arrow-left,
 .scroll-arrow-right {
@@ -190,7 +190,7 @@ body.hasHover .project-card:hover {
   
 /* Project card description */
 .project-card-description {
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.45vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.5vw);
     margin-bottom: 0.5em;
     text-align: justify;
     text-justify: inter-word;
@@ -209,9 +209,9 @@ body.hasHover .project-card-link:hover{
 
 @media (max-width: 600px) {
 
-    #research.project-container {
+    /* #research.project-container {
         flex-direction: column;
-    }
+    } */
 
     #research .project-card {
         max-width:60vw;
