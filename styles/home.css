@@ -36,8 +36,8 @@
 
 .summary {
     font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.5vw);
-    text-align: justify;
-    text-justify: inter-word;
+    /* text-align: justify;
+    text-justify: inter-word; */
     line-height: 1.3em;
 }
 
