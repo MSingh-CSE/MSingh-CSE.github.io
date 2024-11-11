@@ -45,9 +45,51 @@
     width: 40%;
 }
 
+/* Image Fade Transition */
+.home-image {
+    position: relative;  /* Make the container relative so the loader stays within the image div */
+}
+
 .home-image img {
     width: 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
+
+/* Hide image initially while loading */
+.home-image img.loading {
+    opacity: 0;
+}
+
+/* Loader for individual image */
+.image-loader {
+    position: absolute;  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;  
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(var(--background-color)); 
+}
+
+/* Spinner animation */
+.image-loader-spinner {
+    border: 6px solid rgb(var(--text-color));
+    border-top: 6px solid rgb(var(--highlight-color)); 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Spin keyframe animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 @media (max-width: 600px) {
     
