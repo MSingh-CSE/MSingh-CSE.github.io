@@ -26,40 +26,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
-
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const images = document.querySelectorAll('.theme-image');
     const imageLoaders = document.querySelectorAll('.image-loader'); 
 
-    // Function to update images based on the theme
+    function shouldLoadImage() {
+        return window.innerWidth > 600;
+    }
+
     function updateImagesForTheme() {
         images.forEach((img, index) => {
+            if (!shouldLoadImage()) {
+                imageLoaders[index].style.display = 'none';
+                return;
+            }
+
             const lightSrc = img.getAttribute('data-light');
             const darkSrc = img.getAttribute('data-dark');
             const newSrc = document.body.classList.contains('dark-theme') ? darkSrc : lightSrc;
 
-            // Show the loader and make image transparent during the transition
-            img.classList.add('loading');
-            imageLoaders[index].style.display = 'flex';
+            if (img.src !== newSrc) {
+                img.classList.add('loading');
+                imageLoaders[index].style.display = 'flex';
+                img.src = newSrc;
 
-            // Change the image source
-            img.src = newSrc;
-
-            // Once the image is loaded, remove the loading class and hide the loader
-            img.onload = () => {
-                img.classList.remove('loading');
-                imageLoaders[index].style.display = 'none'; 
-            };
+                img.onload = () => {
+                    img.classList.remove('loading');
+                    imageLoaders[index].style.display = 'none'; 
+                };
+            }
         });
     }
 
-    // Initial call to update images
     updateImagesForTheme();
-
-    // Toggle theme on button click
-    themeToggle.addEventListener('click', () => {
-        updateImagesForTheme();
-    });
+    window.addEventListener('resize', updateImagesForTheme);
+    themeToggle.addEventListener('click', updateImagesForTheme);
 });
-

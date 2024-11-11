@@ -13,6 +13,7 @@
     --project-slider-arrow: 51, 51, 51;
     --project-shadow: rgba(var(--highlight-color), 0.2);
     --text-highlight: 39, 159, 255;
+    --mobile-nav-link-text: 0, 201, 168;
 }
 
 .dark-theme {
@@ -20,12 +21,13 @@
     --text-color: 248, 249, 253;  
     --button-background: 18, 18, 18;  
     --button-text: 255, 255, 255;  
-    --highlight-color: 0, 128, 255;  
+    /* --highlight-color: 0, 128, 255;   */
     --highlight-color: 0, 201, 168;  
     /* --highlight-color: 0, 95, 255;   */
     --project-slider-arrow: 255, 255, 255;
     --project-shadow: rgba(var(--highlight-color), 0.3);
     --text-highlight: 39, 159, 255;
+    --mobile-nav-link-text: 0, 109, 91;
 }
 
 
