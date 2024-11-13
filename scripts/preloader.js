@@ -6,6 +6,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loader.style.display = 'none';
     content.style.display = 'block';
-
-    updateImagesForTheme();  
 });
