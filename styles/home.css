@@ -5,60 +5,43 @@
 
 .home-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 97);
     flex-direction: row; 
 }
 
-.home-content {
-    width: 55%;
+.home-content{
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
 }
 
-.welcome {
-    font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.8vw);
-    line-height: 2em;
+.welcome{
+    font-size:  calc((var(--vh, 1vh) * 100) / 80 + 0.8vw);
 }
 
-.name {
-    font-size: calc((var(--vh, 1vh) * 100) / 30 + 1.6vw);
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    /* text-align: center; */
+.name{
+    margin-top: 2rem;
+    font-size:  calc((var(--vh, 1vh) * 100) / 50 + 1.4vw);
+    color: rgb(var(--highlight-color));
 }
 
-.title {
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
-    /* text-align: center; */
-    font-weight: 600;
-    margin-bottom: 0.4em;
+.title{
+    font-size:  calc((var(--vh, 1vh) * 100) / 90 + 0.7vw);
+    margin-bottom: 2rem;
 }
 
-.summary {
-    font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.5vw);
-    /* text-align: justify;
-    text-justify: inter-word; */
-    line-height: 1.3em;
+.summary{
+    font-size:  calc((var(--vh, 1vh) * 100) / 90 + 0.7vw);
 }
 
-.home-image {
-    width: 40%;
-}
-
-/* Image Fade Transition */
-.home-image {
-    position: relative;  /* Make the container relative so the loader stays within the image div */
-}
-
-.home-image img {
-    width: 100%;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-/* Hide image initially while loading */
-.home-image img.loading {
-    opacity: 0;
+.summary a{
+    color: inherit;
+    font-weight: bold;
 }
 
 /* Loader for individual image */
@@ -92,19 +75,9 @@
 
 
 @media (max-width: 600px) {
-    
-    .home-main {
-        flex-direction: column;
-        justify-content: center;
-        padding: 2em;
-    }
 
-    .home-content {
-        width: 100%;
-    }
-
-    .home-image img {
-        display: none;
+    .home-content{
+        width:80%
     }
 
     .image-loader-spinner{
@@ -113,18 +86,9 @@
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-    .home-main {
-        flex-direction: column;
-        justify-content: center;
-        padding: 2em;
-    }
 
-    .home-content {
-        width: 100%;
-    }
-
-    .home-image img {
-        display: none;
+    .home-content{
+        width:80%
     }
 
     .image-loader-spinner{

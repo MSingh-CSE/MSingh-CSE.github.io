@@ -5,14 +5,14 @@
 ========================== */
 
 .contact-title{
-    font-size:  calc((var(--vh, 1vh) * 100) / 50 + 3vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 2.5vw);
 }
 
 .contact-center{
     display: flex;
     margin-top: auto;
     margin-bottom: auto;
-    height: 90%;
+    height: 100%;
     width: 90%;
 }
 
@@ -45,7 +45,7 @@
 } 
 
 #contact li a {
-    font-size: calc((var(--vh, 1vh) * 100) / 60 + 1.2vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 60 + 1.1vw);
     text-decoration: none;
     color: rgb(var(--text-color));
     transition: color 0.2s ease;

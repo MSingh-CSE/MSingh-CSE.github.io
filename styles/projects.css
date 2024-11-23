@@ -12,7 +12,7 @@
 }
 
 .project-heading{
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 3vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 2.5vw);
 }
 
 /* Navigation bar styling */
@@ -28,9 +28,9 @@
 }
 
 .project-navbar li {
-    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.8vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.7vw);
     cursor: pointer;
-    padding: 0.5em 4vw;
+    padding: 0.4em 4vw;
     background-color: rgb(15,15,15);
     color: rgb(248, 249, 253);
     border: 1px solid rgb(var(--text-color));
@@ -183,14 +183,14 @@ body.hasHover .project-card:hover {
   
 /* Project card title */
 .project-card-title {
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 0.7vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 45 + 0.65vw);
     margin-bottom: 10px;
     font-weight: bold;
 }
   
 /* Project card description */
 .project-card-description {
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.5vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.4vw);
     margin-bottom: 0.5em;
     text-align: justify;
     text-justify: inter-word;

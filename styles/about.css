@@ -11,7 +11,7 @@
 }
 
 .about-heading{
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 3vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 2.5vw);
 }
 
 .about-navbar ul {
@@ -21,9 +21,9 @@
 }
 
 .about-navbar li {
-    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.8vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.7vw);
     cursor: pointer;
-    padding: 0.5em 4vw;
+    padding: 0.4em 4vw;
     background-color: rgb(15,15,15);
     color: rgb(248, 249, 253);
     border: 1px solid rgb(var(--text-color));
@@ -74,6 +74,7 @@ body.hasHover .about-navbar li.active:hover {
     width: 100%;
     opacity: 0;
     transition: opacity 0.5s ease;
+    height: calc(var(--vh, 1vh) * 90);
   }
 
 /* Timeline style */
@@ -95,11 +96,11 @@ body.hasHover .about-navbar li.active:hover {
 .milestone::before {
     content: ''; 
     position: absolute;
-    left: 0.8rem;
+    left: calc((var(--vh, 1vh) * 100) / 99 + 0.1vw);
     border-radius: 120px;
     bottom: -16vh;
     top: 90%;
-    width: 0.2rem;
+    width: 3px;
     background-color: rgb(var(--text-color));
     z-index: 1;
 }
@@ -111,47 +112,47 @@ body.hasHover .about-navbar li.active:hover {
 .circle {
     position: absolute;
     top: calc(50% - 1vw); 
-    width: 1.6rem; 
-    height: 1.6rem;
+    width: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw); 
+    height: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
     background-color: rgb(var(--text-color));
     border-radius: 50%;
     z-index: 2;
 }
 
 .milestone .circle.present {
-    width: 2rem; 
-    height: 2rem;
+    width: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw); 
+    height: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
     background-color: rgb(var(--text-color));
-    border: 0.4em solid rgb(var(--highlight-color));
-    box-shadow: 0vw 0vw 6px 6px rgba(var(--highlight-color), 0.4);
+    border: 0.25em solid rgb(var(--highlight-color));
+    box-shadow: 0vw 0vw 0.3vw 0.3vw rgba(var(--highlight-color), 0.4);
 }
 
 .milestone-content {
-    padding-left: 3.5rem; 
+    padding-left: calc((var(--vh, 1vh) * 100) / 40 + 3.1vw); 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .name-and-location h2{
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 1.2vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 50 + 1vw);
 }
 
 .name-and-location p{
-    font-size: calc((var(--vh, 1vh) * 100) / 75 + 1vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 75 + 0.7vw);
 }
 
 .journey-context{
-    font-size: calc((var(--vh, 1vh) * 100) / 80 + 0.6vw);
-    padding-left: 3.5rem; 
-    width: 70%;
+    font-size: calc((var(--vh, 1vh) * 100) / 80 + 0.5vw);
+    padding-left: calc((var(--vh, 1vh) * 100) / 40 + 3.1vw); ; 
+    width: 65%;
     margin: 0.25em 0;
     text-align: justify;
     text-justify: inter-word;
 }
 
 .year p{
-    font-size: calc((var(--vh, 1vh) * 100) / 75 + 0.8vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 75 + 0.6vw);
     font-weight: bold;
 }
 
@@ -163,7 +164,6 @@ body.hasHover .about-navbar li.active:hover {
     }
 
     .journey-context{
-        font-size: calc((var(--vh, 1vh) * 100) / 80 + 0.9vw);
         width: 90%;
         margin: 0.35em 0;
     }
