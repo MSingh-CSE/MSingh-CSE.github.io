@@ -96,12 +96,11 @@ body.hasHover .about-navbar li.active:hover {
 .milestone::before {
     content: ''; 
     position: absolute;
-    left: 0.6vw;
-    /* left: calc((var(--vh, 1vh) * 100) / 99 + 0.1vw); */
+    left: calc(calc((var(--vh, 1vh) * 100) / 70 + 0.7vw)/2.5); 
     border-radius: 120px;
-    bottom: -16vh;
+    bottom: calc(calc(var(--vh, 1vh) * -85)/5.5);
     top: 90%;
-    width: 0.25vw;
+    width: 3px;
     background-color: rgb(var(--text-color));
     z-index: 1;
 }
