@@ -139,20 +139,18 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .name-and-location p{
-    font-size: calc((var(--vh, 1vh) * 100) / 65 + 0.7vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
 }
 
 .journey-context{
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.5vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.4vw);
     padding-left: calc((var(--vh, 1vh) * 100) / 40 + 3.1vw); ; 
     width: 65%;
     margin: 0.25em 0;
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 .year p{
-    font-size: calc((var(--vh, 1vh) * 100) / 65 + 0.6vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
     font-weight: bold;
 }
 
@@ -181,7 +179,7 @@ body.hasHover .about-navbar li.active:hover {
     }
 
     .journey-context{
-        font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.8vw);
+        font-size: calc((var(--vh, 1vh) * 100) / 80 + 0.8vw);
         width: 90%;
         margin: 0.35em 0;
     }

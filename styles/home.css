@@ -21,7 +21,7 @@
 }
 
 .welcome{
-    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.8vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 60 + 0.8vw);
 }
 
 .name{
@@ -31,12 +31,12 @@
 }
 
 .title{
-    font-size:  calc((var(--vh, 1vh) * 100) / 80 + 0.7vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
     margin-bottom: 2rem;
 }
 
 .summary{
-    font-size:  calc((var(--vh, 1vh) * 100) / 80 + 0.7vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
 }
 
 .summary a{
