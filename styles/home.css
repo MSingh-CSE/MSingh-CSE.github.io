@@ -5,7 +5,7 @@
 
 .home-main {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     height: calc(var(--vh, 1vh) * 97);
     flex-direction: row; 
@@ -77,7 +77,7 @@
 @media (max-width: 600px) {
 
     .home-content{
-        width:80%
+        width:100%;
     }
 
     .image-loader-spinner{
@@ -88,7 +88,7 @@
 @media (min-width: 601px) and (max-width: 900px) {
 
     .home-content{
-        width:80%
+        width:100%;
     }
 
     .image-loader-spinner{
