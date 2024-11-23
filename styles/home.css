@@ -21,22 +21,22 @@
 }
 
 .welcome{
-    font-size:  calc((var(--vh, 1vh) * 100) / 80 + 0.8vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.8vw);
 }
 
 .name{
     margin-top: 2rem;
-    font-size:  calc((var(--vh, 1vh) * 100) / 50 + 1.4vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 40 + 1.4vw);
     color: rgb(var(--highlight-color));
 }
 
 .title{
-    font-size:  calc((var(--vh, 1vh) * 100) / 90 + 0.7vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 80 + 0.7vw);
     margin-bottom: 2rem;
 }
 
 .summary{
-    font-size:  calc((var(--vh, 1vh) * 100) / 90 + 0.7vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 80 + 0.7vw);
 }
 
 .summary a{

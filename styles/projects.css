@@ -190,7 +190,7 @@ body.hasHover .project-card:hover {
   
 /* Project card description */
 .project-card-description {
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.4vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.4vw);
     margin-bottom: 0.5em;
     text-align: justify;
     text-justify: inter-word;
