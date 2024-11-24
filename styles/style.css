@@ -141,14 +141,44 @@ body.hasHover .toggle-btn:hover{
     opacity: 1;
 }
 
+footer{
+    font-size: calc((var(--vh, 1vh) * 100) / 75 + 0.1vw);
+    position: fixed;
+    bottom: 0vh;
+    /* left: 6vw; */
+    left: 0;
+    width: 100%;
+    width: 94vw;
+    margin-left: 6vw;
+    text-align: center;
+    background-color: rgb(var(--background-color));
+    z-index: 999999;
+}   
+
 @media (max-width: 600px) {
     .content-section{
         margin-left: 10vw;  /* Navbar width */
     }
+    footer{
+        /* left: 12vw; */
+        left: 0;
+        width: 100%;
+        width: 90vw;
+        margin-left: 10vw;
+        text-align: center;
+    }  
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
     .content-section{
         margin-left: 8vw;  /* Navbar width */
     }
+
+    footer{
+        /* left: 10vw; */
+        left: 0;
+        width: 92vw;
+        margin-left: 8vw;
+        text-align: center;
+    }  
 }
