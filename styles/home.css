@@ -13,7 +13,7 @@
 
 .home-content{
     height: 80%;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,18 +25,23 @@
 }
 
 .name{
-    margin-top: 2rem;
+    margin-top: calc(var(--vh, 1vh) * 3);
     font-size:  calc((var(--vh, 1vh) * 100) / 40 + 1.4vw);
     color: rgb(var(--highlight-color));
 }
 
 .title{
-    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
-    margin-bottom: 2rem;
+    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
+    margin-bottom: calc(var(--vh, 1vh) * 4.5);
 }
 
 .summary{
-    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 60 + 0.5vw);
+}
+
+.line-break{
+    display: inline-block;
+    margin-top: calc(var(--vh, 1vh) * 2.7);
 }
 
 .summary a{
