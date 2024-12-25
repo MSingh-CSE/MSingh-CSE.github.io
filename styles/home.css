@@ -31,17 +31,17 @@
 }
 
 .title{
-    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.62vw);
     margin-bottom: calc(var(--vh, 1vh) * 4.5);
 }
 
 .summary{
-    font-size:  calc((var(--vh, 1vh) * 100) / 60 + 0.5vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 62 + 0.5vw);
 }
 
 .line-break{
     display: inline-block;
-    margin-top: calc(var(--vh, 1vh) * 2.7);
+    margin-top: calc(var(--vh, 1vh) * 1.5);
 }
 
 .summary a{
