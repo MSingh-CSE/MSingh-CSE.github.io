@@ -8,20 +8,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5em;
 }
 
 .about-heading{
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 2.5vw);
+    font-family: 'JetBrains Mono';
+    letter-spacing: -.05em;
+    font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
 }
 
 .about-navbar ul {
+    font-family: 'JetBrains Mono';
+    letter-spacing: -.05em;
     list-style-type: none;
     padding: 0;
     display: flex;
 }
 
 .about-navbar li {
-    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.7vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.6vw);
     cursor: pointer;
     padding: 0.4em 4vw;
     background-color: rgb(15,15,15);
@@ -112,8 +117,8 @@ body.hasHover .about-navbar li.active:hover {
 .circle {
     position: absolute;
     top: calc(50% - 1vw); 
-    width: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw); 
-    height: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
+    width: calc((var(--vh, 1vh) * 100) / 70 + 0.6vw); 
+    height: calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
     background-color: rgb(var(--text-color));
     border-radius: 50%;
     z-index: 2;
@@ -128,28 +133,34 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .milestone-content {
-    padding-left: calc((var(--vh, 1vh) * 100) / 40 + 3.1vw); 
+    padding-left: calc((var(--vh, 1vh) * 100) / 35 + 3.1vw); 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .name-and-location h2{
-    font-size: calc((var(--vh, 1vh) * 100) / 40 + 1vw);
+    font-family: 'Jetbrains mono';
+    letter-spacing: -.03em;
+    font-size: calc((var(--vh, 1vh) * 100) / 45 + 0.8vw);
 }
 
 .name-and-location p{
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.7vw);
+    font-family: 'Jetbrains mono';
+    letter-spacing: -.03em;
+    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.5vw);
 }
 
 .journey-context{
-    font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.4vw);
+    font-family: 'EB Garamond';
+    font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.4vw);
     padding-left: calc((var(--vh, 1vh) * 100) / 40 + 3.1vw); ; 
-    width: 65%;
+    width: 70%;
     margin: 0.25em 0;
 }
 
 .year p{
+    font-family: 'Jetbrains mono';
     font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
     font-weight: bold;
 }

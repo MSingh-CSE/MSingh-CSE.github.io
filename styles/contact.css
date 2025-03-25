@@ -5,7 +5,10 @@
 ========================== */
 
 .contact-title{
-    font-size: calc((var(--vh, 1vh) * 100) / 50 + 2.5vw);
+    font-family: 'JetBrains Mono';
+    letter-spacing: -.05em;
+    font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
+    margin-bottom: 0.5em;
 }
 
 .contact-center{
@@ -34,18 +37,19 @@
     flex-direction: column;
     justify-content: space-around;
     list-style-type: none;
-    height: 60%;
+    height: 55%;
     padding: 0;
 }
 
 #contact li {
+    font-family: 'EB Garamond';
     margin: 0.5vw 0; 
     /* padding: 1.5vw 3vw;  */
 
 } 
 
 #contact li a {
-    font-size: calc((var(--vh, 1vh) * 100) / 60 + 1.1vw);
+    font-size: calc((var(--vh, 1vh) * 100) / 60 + 1vw);
     text-decoration: none;
     color: rgb(var(--text-color));
     transition: color 0.2s ease;

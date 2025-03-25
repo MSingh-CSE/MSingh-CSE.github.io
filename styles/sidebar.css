@@ -4,6 +4,7 @@
    - Fixed sidebar layout and styling.
 ========================== */
 #navbar {
+    font-family: 'EB Garamond';
     position: fixed;
     left: 0;
     top: 0;
