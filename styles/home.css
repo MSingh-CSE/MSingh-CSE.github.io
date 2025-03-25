@@ -26,15 +26,15 @@
 }
 
 .name{
-    font-family: 'JetBrains Mono';
+    font-family: "JetBrains Mono" , monospace;
     letter-spacing: -.03em;
     margin-top: calc(var(--vh, 1vh) * 3);
-    font-size:  calc((var(--vh, 1vh) * 100) / 40 + 1.4vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 40 + 1.3vw);
     color: rgb(var(--highlight-color));
 }
 
 .title{
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
     letter-spacing: -.03em;
     font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.62vw);
     margin-bottom: calc(var(--vh, 1vh) * 4.5);
@@ -42,7 +42,7 @@
 
 .summary{
     font-family: 'EB Garamond';
-    font-size:  calc((var(--vh, 1vh) * 100) / 62 + 0.5vw);
+    font-size:  calc((var(--vh, 1vh) * 100) / 55 + 0.43vw);
 }
 
 .line-break{
@@ -85,7 +85,7 @@
 }
 
 #copyright {
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
 }
 
 

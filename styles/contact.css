@@ -5,7 +5,7 @@
 ========================== */
 
 .contact-title{
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
     letter-spacing: -.05em;
     font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
     margin-bottom: 0.5em;

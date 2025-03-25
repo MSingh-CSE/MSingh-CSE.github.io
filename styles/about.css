@@ -12,13 +12,13 @@
 }
 
 .about-heading{
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
     letter-spacing: -.05em;
     font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
 }
 
 .about-navbar ul {
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
     letter-spacing: -.05em;
     list-style-type: none;
     padding: 0;
@@ -140,15 +140,16 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .name-and-location h2{
-    font-family: 'Jetbrains mono';
+    font-family: 'Jetbrains mono' , monospace;
     letter-spacing: -.03em;
     font-size: calc((var(--vh, 1vh) * 100) / 45 + 0.8vw);
 }
 
 .name-and-location p{
-    font-family: 'Jetbrains mono';
+    font-family: 'Jetbrains mono' , monospace;
     letter-spacing: -.03em;
     font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.5vw);
+    margin-bottom: 4px;
 }
 
 .journey-context{
@@ -160,7 +161,7 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .year p{
-    font-family: 'Jetbrains mono';
+    font-family: 'Jetbrains mono' , monospace;
     font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
     font-weight: bold;
 }

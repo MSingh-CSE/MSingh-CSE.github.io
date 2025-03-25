@@ -13,7 +13,7 @@
 }
 
 .project-heading{
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
     letter-spacing: -.05em;
     font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
 }
@@ -25,7 +25,7 @@
 }
 
 .project-navbar ul {
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
     letter-spacing: -.05em;
     list-style-type: none;
     padding: 0;
@@ -187,7 +187,7 @@ body.hasHover .project-card:hover {
   
 /* Project card title */
 .project-card-title {
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono' , monospace;
     line-height: 1.2;
     margin-top: 0.5em;
     font-size: calc((var(--vh, 1vh) * 100) / 45 + 0.48vw);
