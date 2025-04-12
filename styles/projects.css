@@ -13,8 +13,9 @@
 }
 
 .project-heading{
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.05em;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    letter-spacing: -.04em;
     font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
 }
 
@@ -25,8 +26,9 @@
 }
 
 .project-navbar ul {
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.05em;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    letter-spacing: -.04em;
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -187,17 +189,18 @@ body.hasHover .project-card:hover {
   
 /* Project card title */
 .project-card-title {
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
+    font-family: "Playfair Display", serif;
     line-height: 1.2;
     margin-top: 0.5em;
     font-size: calc((var(--vh, 1vh) * 100) / 45 + 0.48vw);
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 500;
 }
   
 /* Project card description */
 .project-card-description {
     font-family: 'EB Garamond';
+    letter-spacing: -.02em;
     font-size: calc((var(--vh, 1vh) * 100) / 50 + 0.3vw);
     line-height: 1.2;
     margin-bottom: 0.5em;

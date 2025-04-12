@@ -5,8 +5,9 @@
 ========================== */
 
 .contact-title{
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.05em;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    letter-spacing: -.04em;
     font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
     margin-bottom: 0.5em;
 }
@@ -43,6 +44,7 @@
 
 #contact li {
     font-family: 'EB Garamond';
+    letter-spacing: -.03em;
     margin: 0.5vw 0; 
     /* padding: 1.5vw 3vw;  */
 

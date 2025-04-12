@@ -12,14 +12,16 @@
 }
 
 .about-heading{
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.05em;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    letter-spacing: -.04em;
     font-size: calc((var(--vh, 1vh) * 100) / 40 + 1.5vw);
 }
 
 .about-navbar ul {
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.05em;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    letter-spacing: -.04em;
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -140,20 +142,23 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .name-and-location h2{
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.03em;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    /* letter-spacing: -.03em; */
     font-size: calc((var(--vh, 1vh) * 100) / 45 + 0.8vw);
 }
 
 .name-and-location p{
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.03em;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    /* letter-spacing: -.03em; */
     font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.5vw);
     margin-bottom: 4px;
 }
 
 .journey-context{
     font-family: 'EB Garamond';
+    letter-spacing: -.02em;
     font-size: calc((var(--vh, 1vh) * 100) / 60 + 0.4vw);
     padding-left: calc((var(--vh, 1vh) * 100) / 40 + 3.1vw); ; 
     width: 70%;
@@ -161,9 +166,10 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .year p{
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
+    font-family: "Playfair Display", serif;
+    letter-spacing: -.03em;
     font-size: calc((var(--vh, 1vh) * 100) / 70 + 0.6vw);
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 @media (max-width: 600px) {

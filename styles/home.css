@@ -22,11 +22,13 @@
 
 .welcome{
     font-family: 'EB Garamond';
+    letter-spacing: -.03em;
     font-size:  calc((var(--vh, 1vh) * 100) / 60 + 0.8vw);
 }
 
 .name{
-    font-family: "JetBrains Mono" , monospace;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
     letter-spacing: -.03em;
     margin-top: calc(var(--vh, 1vh) * 3);
     font-size:  calc((var(--vh, 1vh) * 100) / 40 + 1.3vw);
@@ -34,14 +36,16 @@
 }
 
 .title{
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
-    letter-spacing: -.03em;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    letter-spacing: -.02em;
     font-size:  calc((var(--vh, 1vh) * 100) / 70 + 0.62vw);
     margin-bottom: calc(var(--vh, 1vh) * 4.5);
 }
 
 .summary{
     font-family: 'EB Garamond';
+    letter-spacing: -.02em;
     font-size:  calc((var(--vh, 1vh) * 100) / 55 + 0.43vw);
 }
 
@@ -85,7 +89,7 @@
 }
 
 #copyright {
-    font-family: 'JetBrains Mono', 'Fira Code', 'EB Garamond';
+    font-family: "Playfair Display", serif;
 }
 
 
