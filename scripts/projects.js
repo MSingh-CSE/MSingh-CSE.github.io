@@ -189,3 +189,25 @@ document.addEventListener("DOMContentLoaded", function() {
     checkScrollDevelopment();
     
 });
+
+// No link notification
+document.querySelectorAll('.project-card.no-link').forEach(card => {
+  const tooltip = card.querySelector('.tooltip');
+
+  card.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (!tooltip) return;
+
+    if (card._tooltipTimeout) {
+      clearTimeout(card._tooltipTimeout);
+    }
+
+    card.classList.add('show-tooltip');
+
+    card._tooltipTimeout = setTimeout(() => {
+      card.classList.remove('show-tooltip');
+      card._tooltipTimeout = null;
+    }, 3000);
+  });
+});
+

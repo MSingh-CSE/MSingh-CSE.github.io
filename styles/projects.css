@@ -111,6 +111,7 @@ body.hasHover .project-navbar li.active:hover {
     padding: 2vh 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    cursor: pointer;
 }
 
 .project-container::-webkit-scrollbar {
@@ -163,6 +164,8 @@ body.hasHover .scroll-arrow-right:hover{
   
 /* Individual project cards */
 .project-card {
+    display: block;
+    text-decoration: none;
     max-width:30vw;
     flex: 0 0 auto;
     margin: 1vw;
@@ -172,6 +175,32 @@ body.hasHover .scroll-arrow-right:hover{
     box-shadow: 0vw 0vw 1.3vw var(--project-shadow), 0vw 0vw 1.6vw var(--project-shadow);
     padding: calc(var(--vh, 1vh) * 2) 2vw;
     transition: transform 0.3s ease;
+    position: relative;
+}
+
+.project-card .tooltip {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    background: rgb(0, 109, 91);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    /* border-radius: 5px; */
+    font-family: "Lato";
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    white-space: nowrap;
+}
+.project-card.show-tooltip .tooltip {
+    opacity: 1;
+}
+
+.project-card.no-link{
+    cursor: not-allowed;
 }
 
 .project-card.link-available{
