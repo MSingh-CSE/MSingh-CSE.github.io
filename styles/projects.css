@@ -38,26 +38,26 @@
     font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.6vw);
     cursor: pointer;
     padding: 0.4em 4vw;
-    background-color: rgb(15,15,15);
-    color: rgb(248, 249, 253);
+    background-color: rgb(var(--navbar-dark));
+    color: rgb(var(--navbar-light));
     border: 1px solid rgb(var(--text-color));
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     /* margin-left: 1vw;  */
 }
 
 .project-navbar li.active {
-    background-color: rgb(248, 249, 253);
-    color: rgb(15,15,15);
+    background-color: rgb(var(--navbar-light));
+    color: rgb(var(--navbar-dark));
 }
 
 body.hasHover .project-navbar li:hover {
-    background-color: rgb(40, 40, 40); 
-    color: rgb(248, 249, 253);
+    background-color: rgb(var(--navbar-hover));
+    color: rgb(var(--navbar-light));
 }
 
 body.hasHover .project-navbar li.active:hover {
-    background-color: rgb(248, 249, 253);
-    color: rgb(15,15,15);
+    background-color: rgb(var(--navbar-light));
+    color: rgb(var(--navbar-dark));
     cursor: default;
 }
 
@@ -166,7 +166,7 @@ body.hasHover .scroll-arrow-right:hover{
 .project-card {
     display: block;
     text-decoration: none;
-    max-width:30vw;
+    max-width:25vw;
     flex: 0 0 auto;
     margin: 1vw;
     background-color: var(--background-color);
@@ -182,7 +182,7 @@ body.hasHover .scroll-arrow-right:hover{
     position: absolute;
     bottom: 0rem;
     right: 0rem;
-    background: rgb(0, 109, 91);
+    background: rgb(var(--highlight-color));
     color: white;
     padding: 0.3rem 0.6rem;
     /* border-radius: 5px; */

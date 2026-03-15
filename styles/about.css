@@ -26,29 +26,29 @@
     padding: 0;
     display: flex;
 }
-
 .about-navbar li {
     font-size: calc((var(--vh, 1vh) * 100) / 90 + 0.6vw);
     cursor: pointer;
     padding: 0.4em 4vw;
-    background-color: rgb(15,15,15);
-    color: rgb(248, 249, 253);
+    background-color: rgb(var(--navbar-dark));
+    color: rgb(var(--navbar-light));
     border: 1px solid rgb(var(--text-color));
     transition: background-color 0.3s, color 0.3s;
 }
-.about-navbar li.active{
-    background-color: rgb(248, 249, 253);
-    color: rgb(15,15,15);
+
+.about-navbar li.active {
+    background-color: rgb(var(--navbar-light));
+    color: rgb(var(--navbar-dark));
 }
 
 body.hasHover .about-navbar li:hover {
-    background-color: rgb(40, 40, 40); 
-    color: rgb(248, 249, 253);
+    background-color: rgb(var(--navbar-hover));
+    color: rgb(var(--navbar-light));
 }
 
 body.hasHover .about-navbar li.active:hover {
-    background-color: rgb(248, 249, 253);
-    color: rgb(15,15,15);
+    background-color: rgb(var(--navbar-light));
+    color: rgb(var(--navbar-dark));
     cursor: default;
 }
 
@@ -88,7 +88,7 @@ body.hasHover .about-navbar li.active:hover {
 .timeline {
     position: relative;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 85);
+    height: calc(var(--vh, 1vh) * 78);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -101,15 +101,20 @@ body.hasHover .about-navbar li.active:hover {
 }
 
 .milestone::before {
-    content: ''; 
+    content: '';
     position: absolute;
-    left: calc(calc((var(--vh, 1vh) * 100) / 70 + 0.7vw)/2.5); 
-    border-radius: 120px;
-    bottom: calc(calc(var(--vh, 1vh) * -50)/5.5);
+    left: calc(((var(--vh, 1vh) * 100) / 70 + 0.7vw) / 2 - 1.5px);
     top: 90%;
+    bottom: calc(var(--vh, 1vh) * -8);
     width: 3px;
+    border-radius: 120px;
     background-color: rgb(var(--text-color));
     z-index: 1;
+}
+
+/* When there are only 2 milestones, first child gets a longer line */
+.milestone:first-child:nth-last-child(2)::before {
+    bottom: calc(var(--vh, 1vh) * -15);
 }
 
 .milestone:last-child::before {

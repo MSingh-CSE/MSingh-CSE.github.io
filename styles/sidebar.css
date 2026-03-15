@@ -57,7 +57,7 @@
 }
 
 #navbar ul li p{
-    font-size: 2.3vh;
+    font-size: 2.5vh;
     transform: rotate(-90deg);
     transform-origin: center;
 }
@@ -96,7 +96,7 @@ body.hasHover #navbar ul li a:hover{
     }
     
     #navbar ul li a.active{
-        color: rgb(var(--mobile-nav-link-text));
+        color: rgb(var(--background-color));
         background-color: rgb(var(--text-color));
     }
     
@@ -132,7 +132,7 @@ body.hasHover #navbar ul li a:hover{
     }
     
     #navbar ul li a.active{
-        color: rgb(var(--mobile-nav-link-text));
+        color: rgb(var(--background-color));
         background-color: rgb(var(--text-color));
     }
     

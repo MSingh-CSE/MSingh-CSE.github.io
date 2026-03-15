@@ -13,7 +13,7 @@
 
 .home-content{
     /* height: 80%; */
-    width: 65%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

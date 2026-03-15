@@ -5,31 +5,31 @@
 /* Default light theme */
 
 :root {
-    --background-color: 248, 249, 253;
-    --text-color: 15, 15, 15;
-    --button-background: #eee;
-    --button-text: 0, 0, 0;
-    --highlight-color: 0, 109, 91; 
-    --project-slider-arrow: 51, 51, 51;
-    --project-shadow: rgba(var(--highlight-color), 0.2);
-    --text-highlight: 39, 159, 255;
-    --mobile-nav-link-text: 0, 201, 168;
+    --background-color: 247, 244, 239;   
+    --text-color: 26, 24, 20;          
+    --button-background: #EDE9E2;
+    --button-text: 26, 24, 20;
+    --highlight-color: 122, 79, 45;
+    --project-slider-arrow: 92, 64, 48;
+    --project-shadow: rgba(var(--highlight-color), 0.15);
+    --text-highlight: 184, 115, 51;
+    --mobile-nav-link-text: 92, 64, 48;
+    --navbar-dark: 26, 24, 20;
+    --navbar-light: 247, 244, 239;
+    --navbar-hover: 36, 33, 28;
 }
 
 .dark-theme {
-    --background-color: 15, 15, 15;  
-    --text-color: 248, 249, 253;  
-    --button-background: 18, 18, 18;  
-    --button-text: 255, 255, 255;  
-    /* --highlight-color: 0, 128, 255;   */
-    --highlight-color: 0, 201, 168;  
-    /* --highlight-color: 0, 95, 255;   */
-    --project-slider-arrow: 255, 255, 255;
-    --project-shadow: rgba(var(--highlight-color), 0.3);
-    --text-highlight: 39, 159, 255;
-    --mobile-nav-link-text: 0, 109, 91;
+    --background-color: 26, 24, 20;    
+    --text-color: 226, 218, 208;
+    --button-background: 36, 33, 28;
+    --button-text: 226, 218, 208;
+    --highlight-color: 200, 136, 58;
+    --project-slider-arrow: 154, 144, 136;
+    --project-shadow: rgba(var(--highlight-color), 0.2);
+    --text-highlight: 212, 160, 85;
+    --mobile-nav-link-text: 154, 144, 136;
 }
-
 
 * {
     box-sizing: border-box;
@@ -99,7 +99,7 @@ body {
 
 .content-section{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: calc(var(--vh, 1vh) * 100);
     scroll-snap-align: start;
