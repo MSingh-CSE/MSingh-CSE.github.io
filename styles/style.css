@@ -17,6 +17,7 @@
     --navbar-dark: 26, 24, 20;
     --navbar-light: 247, 244, 239;
     --navbar-hover: 36, 33, 28;
+    --mobile-nav-link-text: 200, 136, 58;
 }
 
 .dark-theme {
@@ -28,7 +29,7 @@
     --project-slider-arrow: 154, 144, 136;
     --project-shadow: rgba(var(--highlight-color), 0.2);
     --text-highlight: 212, 160, 85;
-    --mobile-nav-link-text: 154, 144, 136;
+    --mobile-nav-link-text: 122, 79, 45;
 }
 
 * {

@@ -96,7 +96,7 @@ body.hasHover #navbar ul li a:hover{
     }
     
     #navbar ul li a.active{
-        color: rgb(var(--background-color));
+        color: rgb(var(--mobile-nav-link-text));
         background-color: rgb(var(--text-color));
     }
     
@@ -132,7 +132,7 @@ body.hasHover #navbar ul li a:hover{
     }
     
     #navbar ul li a.active{
-        color: rgb(var(--background-color));
+        color: rgb(var(--mobile-nav-link-text));
         background-color: rgb(var(--text-color));
     }
     
