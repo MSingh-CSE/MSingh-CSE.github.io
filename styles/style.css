@@ -61,10 +61,12 @@ body {
     color: rgba(var(--text-color), 1);
 }
 
-/* Smooth theme transition (only when toggling) */
-body.theme-transition,
-body.theme-transition * {
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+/* Smooth theme transition only on larger viewports (avoids mobile lag and text/background desync) */
+@media (min-width: 901px) {
+    body.theme-transition,
+    body.theme-transition * {
+        transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
 }
 
 /* ==========================

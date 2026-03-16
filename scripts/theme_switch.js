@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     themeToggle.addEventListener('click', function () {
-        document.body.classList.add('theme-transition');
+        const isMobile = window.innerWidth <= 900;
+        if (!isMobile) {
+            document.body.classList.add('theme-transition');
+        }
         requestAnimationFrame(() => {
             document.body.classList.toggle('dark-theme');
             if (document.body.classList.contains('dark-theme')) {
@@ -26,7 +29,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 iconDark.style.display = 'none';
                 localStorage.setItem('theme', 'light-theme');
             }
-            setTimeout(() => document.body.classList.remove('theme-transition'), 450);
+            if (!isMobile) {
+                setTimeout(() => document.body.classList.remove('theme-transition'), 450);
+            }
         });
     });
 });
