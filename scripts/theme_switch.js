@@ -14,16 +14,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     themeToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark-theme');
-        if (document.body.classList.contains('dark-theme')) {
-            iconDark.style.display = 'block';
-            iconLight.style.display = 'none';
-            localStorage.setItem('theme', 'dark-theme');
-        } else {
-            iconLight.style.display = 'block';
-            iconDark.style.display = 'none';
-            localStorage.setItem('theme', 'light-theme');
-        }
+        document.body.classList.add('theme-transition');
+        requestAnimationFrame(() => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                iconDark.style.display = 'block';
+                iconLight.style.display = 'none';
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                iconLight.style.display = 'block';
+                iconDark.style.display = 'none';
+                localStorage.setItem('theme', 'light-theme');
+            }
+            setTimeout(() => document.body.classList.remove('theme-transition'), 450);
+        });
     });
 });
 document.addEventListener('DOMContentLoaded', () => {

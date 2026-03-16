@@ -61,6 +61,12 @@ body {
     color: rgba(var(--text-color), 1);
 }
 
+/* Smooth theme transition (only when toggling) */
+body.theme-transition,
+body.theme-transition * {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
 /* ==========================
    CUSTOM SCROLLBAR STYLING
    - Styles for the browser scrollbar.
